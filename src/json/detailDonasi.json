@@ -1,0 +1,15 @@
+{
+    "detailDonasi": [
+        {
+            "id": 1,
+            "detail": "Halo EXO-L yang luar biasa!\n\nMari bergabung dalam proyek spesial ini untuk merayakan anniversary yang istimewa dari EXO. Sebagai bentuk cinta dan dukungan kita kepada mereka, kita akan menanam pohon-pohon yang indah sebagai simbol keberlanjutan dan pertumbuhan, sebagaimana pertumbuhan tak terhingga EXO dalam hati kita.\n\nSetiap donasi yang kamu berikan akan diarahkan untuk menanam pohon-pohon di area yang membutuhkan, menciptakan jejak hijau yang langgeng sebagai perayaan komitmen kita terhadap bumi dan keberlanjutan. Bersama-sama, kita tidak hanya merayakan prestasi luar biasa EXO, tetapi juga berkontribusi pada kelestarian lingkungan untuk generasi mendatang.\n\nAyo bergabung dalam proyek ini dan tunjukkan bahwa cinta kita kepada EXO dapat menciptakan dampak positif yang nyata di dunia ini. Setiap donasi, sebesar apapun, akan membawa kita satu langkah lebih dekat untuk merayakan ulang tahun mereka dengan makna yang mendalam.",
+            "tentang": {
+                "lokasi": "Pantai Loang Baloq, Kota Mataram",
+                "jenisBibit": "Mangrove Rhizophora",
+                "harga": "39.000",
+                "tanggalPenanaman": "Jumat, 30 Juni 2024",
+                "deskripsi": "Taman Loang Balok di NTB adalah kawasan konservasi mangrove, penting untuk melindungi ekosistem pesisir dan menjaga keanekaragaman hayati."
+            }
+        }
+    ]
+}

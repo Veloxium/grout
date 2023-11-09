@@ -17,7 +17,7 @@ function Button(props: ButtonProps) {
   const shadowClass = props.shadow ? "shadow-outline-primary" : "";
   const typeClass =
     props.type === "primary"
-      ? "bg-primary-600 border-2 border-primary-600"
+      ? "bg-primary-600 border-2 border-primary-600 hover:bg-primary-500 hover:border-primary-500 ease-in-out transition-all"
       : props.type === "secondary"
       ? "bg-secondary-600 border-2 border-secondary-600"
       : props.type === "accent"
@@ -39,7 +39,7 @@ function Button(props: ButtonProps) {
   return (
     <Link 
       href={props.href  ? props.href : "/"}
-      className={`flex text-white items-center justify-center gap-2 rounded-md cursor-pointer ${shadowClass} ${typeClass} ${sizeClass} ${props.custom}`}
+      className={`inline-flex text-white items-center justify-center gap-2 rounded-md cursor-pointer ${shadowClass} ${typeClass} ${sizeClass} ${props.custom}`}
     >
       <p className={props.textCustom}>{props.text}</p>
       {props.icon && (

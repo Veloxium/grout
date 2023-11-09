@@ -1,9 +1,6 @@
 import { Poppins } from "next/font/google";
 import Button from "@/components/button";
-import DumbSvg from "@/assets/svg/dumb.svg";
 import Image from "next/image";
-import Link from "next/link";
-import Navbar from "@/components/navbar";
 import Layout from "@/layout/layout";
 import Background from "@/assets/images/background.png";
 import { useEffect, useRef, useState } from "react";
@@ -26,36 +23,9 @@ import Gabung from "@/assets/images/gabung.png";
 export default function Home() {
   const [kampanye, setKampanye] = useState("semua");
 
-  const selectedElementRef = useRef(null);
-
-  useEffect(() => {
-    // Set "Semua" as the default selection
-    if (selectedElementRef.current) {
-      (selectedElementRef.current as HTMLElement).classList.add(
-        "bg-primary-600",
-        "text-white"
-      );
-      setKampanye("semua");
-    }
-  }, []);
-
   const handleKampanye = (e: any) => {
     e.preventDefault();
-
-    // Clear the class from the previously selected element
-    if (selectedElementRef.current) {
-      (selectedElementRef.current as HTMLElement).classList.remove(
-        "bg-primary-600",
-        "text-white"
-      );
-    }
-
-    // Set the new kampanye and add the class to the clicked element
     setKampanye(e.target.innerText.toLowerCase().replace(" ", "-"));
-    (e.target as HTMLElement).classList.add("bg-primary-600", "text-white");
-
-    // Update the selectedElementRef to the currently clicked element
-    selectedElementRef.current = e.target;
   };
 
   return (
@@ -70,11 +40,13 @@ export default function Home() {
         </div>
         <div className="px-24 flex flex-col justify-end pb-20 h-screen">
           <div className="flex flex-col justify-center w-2/3">
-            <p className="text-5xl font-bold ">Pohon Untuk Masa Depan,</p>
-            <p className="text-5xl font-bold mt-6">
+            <p className="text-5xl font-bold drop-shadow-lg">
+              Pohon Untuk Masa Depan,
+            </p>
+            <p className="text-5xl font-bold mt-4 drop-shadow-lg">
               Donasikan Untuk Lingkungan!
             </p>
-            <p className="text-xl mb-10 mt-8">
+            <p className="text-xl mb-10 mt-8 drop-shadow-lg">
               Ayo bantu lingkungan menjadi lebih baik dan berikan dampak yang
               baik untuk masyarakat
             </p>
@@ -105,28 +77,42 @@ export default function Home() {
       <section className="flex flex-col justify-center items-center py-20">
         <p className="font-semibold text-3xl">Kampanye Sedang Berlangsung</p>
         <div className="w-1/5 h-1 bg-black mt-6 rounded-md"></div>
-        <div className="flex justify-start w-full pt-10 px-24">
+        <div className="px-24 w-full flex justify-start mt-6">
           <div className="flex gap-4">
             <div onClick={handleKampanye} className="cursor-pointer">
               <p
-                ref={selectedElementRef}
-                className="px-4 py-1 font-semibold border-2 border-primary-600
-                  text-primary-600 rounded-full"
+                className={`px-4 py-1 font-semibold border-2 border-primary-600
+                 rounded-full hover:bg-primary-600 hover:text-white ease-in-out transition-all ${
+                   kampanye === "semua"
+                     ? "bg-primary-600 text-white"
+                     : "bg-white text-primary-600"
+                 }`}
               >
                 Semua
               </p>
             </div>
             <div onClick={handleKampanye} className="cursor-pointer">
               <p
-                className="px-4 py-1 font-semibold border-2 border-primary-600
-                  text-primary-600 rounded-full"
+                className={`px-4 py-1 font-semibold border-2 border-primary-600
+                 rounded-full hover:bg-primary-600 hover:text-white ease-in-out transition-all ${
+                   kampanye === "sedang-berlangsung"
+                     ? "bg-primary-600 text-white"
+                     : "bg-white text-primary-600"
+                 }`}
               >
                 Sedang Berlangsung
               </p>
             </div>
             <div onClick={handleKampanye} className="cursor-pointer">
-              <p className="px-4 py-1 font-semibold border-2 border-primary-600 text-primary-600 rounded-full">
-                Telah Selesei
+              <p
+                className={`px-4 py-1 font-semibold border-2 border-primary-600
+                 rounded-full hover:bg-primary-600 hover:text-white ease-in-out transition-all ${
+                   kampanye === "telah-selesai"
+                     ? "bg-primary-600 text-white"
+                     : "bg-white text-primary-600"
+                 }`}
+              >
+                Telah Selesai
               </p>
             </div>
           </div>

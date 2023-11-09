@@ -5,15 +5,7 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
-        <Head>
-          <meta charSet="UTF-8" />
-          <meta name="description" content="Donasi untuk anak-anak Indonesia" />
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0"
-          />
-          <title>GROUT</title>
-        </Head>
+        <Head />
         <body>
           <Main />
           <NextScript />

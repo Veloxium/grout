@@ -34,7 +34,7 @@ function SliderDonasi(props: sliderDonasi) {
 
       <Swiper
         modules={[Navigation, Pagination, A11y]}
-        spaceBetween={50}
+        spaceBetween={40}
         slidesPerView={4}
         navigation={{
           nextEl: ".next",

@@ -75,7 +75,7 @@ function Masuk() {
                   Ingat Saya
                 </label>
               </div>
-              <ButtonSubmit text="Masuk" type="primary" custom="w-full" />
+              <ButtonSubmit text="Masuk" type="primary" custom="w-full mt-2" />
             </form>
             <Link href={""} className="text-sm text-blue-600">Lupa Kata Sandi</Link>
             <p className="text-sm mt-4 mb-2">
