@@ -6,7 +6,7 @@ import Background2 from "@/assets/images/background2.png";
 import Buat from "@/assets/images/buat.png";
 import CardDonasi from "@/components/cardDonasi";
 import DonasiImg from "@/assets/images/donasi.jpeg";
-import {donasiData} from "@/json/donasi.json";
+import donasiData from "@/json/donasi.json";
 
 function Donasi() {
   const [kampanye, setKampanye] = useState("semua");
@@ -14,8 +14,8 @@ function Donasi() {
   const [currentCardPage, setCurrentCardPage] = useState<number>(1);
 
   const [cardNum, setCardNum] = useState<number>(0);
-  // const [paginationNum, setPaginationNum] = useState<number>(0);
 
+  const donasi = donasiData.donasiData;
 
   const handleKampanye = (e: any) => {
     e.preventDefault();
@@ -33,7 +33,7 @@ function Donasi() {
   // console.log(currentCardPage);
 
   const nextCardPage = () => {
-    if (currentCardPage === (donasiData.length / 12 )) {
+    if (currentCardPage === (donasi.length / 12 )) {
       return;
     }
     setCurrentCardPage(currentCardPage + 1);
@@ -160,7 +160,7 @@ function Donasi() {
         </div>
         <div className="flex flex-col gap-10 py-14 px-24">
           <div className="grid grid-cols-4 place-items-center gap-10">
-            {donasiData
+            {donasi
               .slice(cardNum, cardNum + 12)
               .map((item, index) => (
                 <CardDonasi
@@ -195,7 +195,7 @@ function Donasi() {
               </svg>
             </div>
             <div className="flex gap-6">
-              {[...Array(donasiData.length / 12 + 1)]
+              {[...Array(donasi.length / 12 + 1)]
                 .slice(
                   currentCardPage > 3 ? currentCardPage - 2 : 0,
                   currentCardPage > 3 ? currentCardPage + 3 : 5

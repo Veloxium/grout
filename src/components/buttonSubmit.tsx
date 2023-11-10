@@ -17,7 +17,7 @@ function ButtonSubmit(props: ButtonProps) {
      const shadowClass = props.shadow ? "shadow-outline-primary" : "";
   const typeClass =
     props.type === "primary"
-      ? "bg-primary-600 border-2 border-primary-600"
+      ? "bg-primary-600 border-2 border-primary-600 text-white"
       : props.type === "secondary"
       ? "bg-secondary-600 border-2 border-secondary-600"
       : props.type === "accent"
@@ -36,12 +36,13 @@ function ButtonSubmit(props: ButtonProps) {
       ? "p-xlarge"
       : "p-medium";
 
+
   return (
     <button 
       type='submit'
-      className={`flex text-white items-center justify-center gap-2 rounded-md cursor-pointer ${shadowClass} ${typeClass} ${sizeClass} ${props.custom}`}
+      className={`flex items-center justify-center gap-2 rounded-md cursor-pointer ${shadowClass} ${typeClass} ${sizeClass} ${props.custom}`}
     >
-      <p className={props.textCustom}>{props.text}</p>
+      <p className={props.textCustom }>{props.text}</p>
       {props.icon && (
         <Image
           src={props.icon}

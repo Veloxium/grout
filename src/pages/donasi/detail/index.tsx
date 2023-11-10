@@ -4,12 +4,14 @@ import Layout from "@/layout/layout";
 import Image from "next/image";
 import Profile from "@/assets/images/profile.jpg";
 import Button from "@/components/button";
-import { detailDonasi } from "@/json/detailDonasi.json";
+import detailDonasi from "@/json/detailDonasi.json";
 import BgDetail from "@/assets/images/tentangKampnaye.jpeg";
+import Link from "next/link";
 
 function DetailDonasi() {
   const [desc, setDesc] = useState<boolean>(true);
   const [donatur, setDonatur] = useState<boolean>(true);
+  const details = detailDonasi.detailDonasi[0];
 
   const id = 0;
 
@@ -106,10 +108,15 @@ function DetailDonasi() {
               </div>
             </div>
           </div>
-          <div className="flex gap-1 my-1">
-            <p>Kampanye ini mencurigakan? </p>
-            <p className="font-semibold text-red-600">Laporkan</p>
-          </div>
+          <Link
+            href={"/donasi/laporkan"}
+            className="flex gap-1 my-1 hover:underline"
+          >
+            <p className="text-sm">
+              Kampanye ini mencurigakan?{" "}
+              <span className="font-semibold text-red-600">Laporkan</span>
+            </p>
+          </Link>
         </div>
       </section>
       <section>
@@ -140,7 +147,7 @@ function DetailDonasi() {
             <div className="flex flex-col">
               {desc ? (
                 <div className="flex flex-col gap-2 px-6 py-8 text-justify">
-                  {detailDonasi[id].detail.split("\n\n").map((e, i) => (
+                  {details.detail.split("\n\n").map((e, i) => (
                     <p className={i == 0 ? "font-semibold" : ""}>{e}</p>
                   ))}
                 </div>
@@ -148,25 +155,25 @@ function DetailDonasi() {
                 <div className="flex flex-col gap-2 px-6 py-8 text-justify">
                   <div className="flex gap-1">
                     <p className="font-semibold">Lokasi Penanaman</p>
-                    <p>: {detailDonasi[id].tentang.lokasi}</p>
+                    <p>: {details.tentang.lokasi}</p>
                   </div>
                   <div className="flex gap-1">
                     <p className="font-semibold">Jenis Bibit Pohon</p>
-                    <p>: {detailDonasi[id].tentang.jenisBibit}</p>
+                    <p>: {details.tentang.jenisBibit}</p>
                   </div>
                   <div className="flex gap-1">
                     <p className="font-semibold">Harga Bibit Pohon</p>
-                    <p>: {detailDonasi[id].tentang.harga}</p>
+                    <p>: {details.tentang.harga}</p>
                   </div>
                   <div className="flex gap-1">
                     <p className="font-semibold">Tanggal Penanaman</p>
-                    <p>: {detailDonasi[id].tentang.tanggalPenanaman}</p>
+                    <p>: {details.tentang.tanggalPenanaman}</p>
                   </div>
                   <div className="flex flex-col">
                     <p className="font-semibold">
                       Deskripsi Wilayayh Penanaman
                     </p>
-                    <p>{detailDonasi[id].tentang.deskripsi}</p>
+                    <p>{details.tentang.deskripsi}</p>
                   </div>
                   <div className="h-[400px] mt-4">
                     <Image
@@ -175,6 +182,9 @@ function DetailDonasi() {
                       className="w-full h-full rounded-xl object-cover"
                     />
                   </div>
+                  <p className="text-sm text-slate-500 my-1">
+                    Gambar : {details.tentang.lokasi}
+                  </p>
                 </div>
               )}
             </div>
@@ -203,6 +213,28 @@ function DetailDonasi() {
               </div>
             </div>
             <div className="flex flex-col py-6 px-4 gap-2">
+              <div className="flex gap-4 p-2 bg-primary-50 rounded-lg">
+                <Image
+                  src={Profile}
+                  alt=".."
+                  className="aspect-square rounded-full object-cover w-[50px] h-[50px] border-primary-400 border-2"
+                />
+                <div>
+                  <p>Alwi</p>
+                  <p className="font-semibold">100 Pohon</p>
+                </div>
+              </div>
+              <div className="flex gap-4 p-2 bg-primary-50 rounded-lg">
+                <Image
+                  src={Profile}
+                  alt=".."
+                  className="aspect-square rounded-full object-cover w-[50px] h-[50px] border-primary-400 border-2"
+                />
+                <div>
+                  <p>Alwi</p>
+                  <p className="font-semibold">100 Pohon</p>
+                </div>
+              </div>
               <div className="flex gap-4 p-2 bg-primary-50 rounded-lg">
                 <Image
                   src={Profile}

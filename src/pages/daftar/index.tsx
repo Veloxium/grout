@@ -1,6 +1,6 @@
 import Layout from "@/layout/layout";
 import Link from "next/link";
-import React, { FormEvent } from "react";
+import React, { ChangeEvent, FormEvent, useState } from "react";
 import Image from "next/image";
 import Logo from "@/assets/images/logo.png";
 import DaftarImg from "@/assets/images/daftar.png";
@@ -21,15 +21,20 @@ type inputType = {
   username: string;
   email: string;
   telepon: string;
+  jenisKelamin: string;
   password: string;
-  password2: string;
+  konfirmasi: string;
   sdk: boolean;
 };
 
 function Daftar() {
-
   const router = useRouter();
 
+  const [selectedValue, setSelectedValue] = useState("");
+
+  const handleDropdownChange = (event: ChangeEvent<HTMLSelectElement>) => {
+    setSelectedValue(event.target.value);
+  };
 
   function handleSubmit(e: FormEvent) {
     e.preventDefault();
@@ -38,9 +43,11 @@ function Daftar() {
       nama: formData.get("nama") as string,
       username: formData.get("username") as string,
       email: formData.get("email") as string,
+      telepon: formData.get("telepon") as string,
+      jenisKelamin: formData.get("jenisKelamin") as string,
       password: formData.get("password") as string,
-      password2: formData.get("password2") as string,
-      sdk: formData.get("ingat") === "true", // Set ingat to true if the form value is "true", otherwise, it will be false
+      konfirmasi: formData.get("konfirmasi") as string,
+      //sdk: formData.get("ingat") === "true", // Set ingat to true if the form value is "true", otherwise, it will be false
     } as inputType;
     console.log(formDataObject);
   }
@@ -107,6 +114,20 @@ function Daftar() {
                 placeholder="08xxxxxx"
                 type="text"
               />
+              <div className="w-full flex flex-col gap-1">
+                <label htmlFor="dropdown">Jenis Kelamin</label>
+                <select
+                  id="jenisKelamin"
+                  name="jenisKelamin"
+                  style={{ padding: "0.5rem 0.7rem" }}
+                  value={selectedValue}
+                  onChange={handleDropdownChange}
+                  className="w-full px-4 py-2 bg-secondary-50 border border-black rounded-lg focus:outline-primary-600"
+                >
+                  <option value="laki-laki">Laki Laki</option>
+                  <option value="perempuan">Perempuan</option>
+                </select>
+              </div>
               <Input
                 name="password"
                 label="Kata Sandi"
@@ -114,7 +135,7 @@ function Daftar() {
                 type="password"
               />
               <Input
-                name="password2"
+                name="konfirmasi"
                 label="Konfirmasi Kata Sandi"
                 placeholder="Konfirmasi Kata Sandi"
                 type="password"
@@ -129,9 +150,14 @@ function Daftar() {
                 />
                 <label htmlFor="sdk" className="text-xs">
                   Dengan membuat akun, Anda setuju dengan{" "}
-                  <span className="text-blue-600 cursor-pointer hover:underline" onClick={()=>{
-                    router.push('/sdk');
-                  }}>Syarat dan Ketentuan</span>
+                  <span
+                    className="text-blue-600 cursor-pointer hover:underline"
+                    onClick={() => {
+                      router.push("/sdk");
+                    }}
+                  >
+                    Syarat dan Ketentuan
+                  </span>
                 </label>
               </div>
               <ButtonSubmit text="Daftar" type="primary" custom="w-full" />

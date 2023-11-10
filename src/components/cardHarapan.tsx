@@ -9,7 +9,7 @@ function CardHarapan() {
         <Image
           src={Profile}
           alt=".."
-          className="aspect-square rounded-full object-cover w-[56px] h-[56px] border-primary-400 border-4"
+          className="aspect-square rounded-full object-cover w-[56px] h-[56px] border-primary-400 border-2"
         />
         <div className="flex flex-col">
           <p className="font-semibold">Mark</p>
