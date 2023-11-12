@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import BgDonasi from "@/assets/images/detailkampanye.png";
 import Layout from "@/layout/layout";
 import Image from "next/image";
@@ -11,22 +11,22 @@ import Link from "next/link";
 function DetailDonasi() {
   const [desc, setDesc] = useState<boolean>(true);
   const [donatur, setDonatur] = useState<boolean>(true);
-  const details = detailDonasi.detailDonasi[0];
-
   const id = 0;
+  const details = detailDonasi.detailDonasi[id];
 
   return (
     <Layout>
       <section>
         <div className="mt-32 flex flex-col justify-center items-center">
-          <div className="text-2xl font-bold">Donansi Bersama</div>
-          <div className="text-3xl">
+          <p className="text-2xl font-bold">Donansi Bersama</p>
+          <p className="text-3xl">
             EXO-TREES: “Save Our World with EXO, WE ARE ONE!”
-          </div>
+          </p>
+          <p className="bg-primary-600 text-white rounded-full px-2 mt-2">Mangrove Rhizophora</p>
         </div>
         <div className="flex flex-col w-full px-24 py-14">
           <div className="flex gap-6">
-            <div className="w-2/3">
+            <div className="w-2/3 border-2 rounded-lg shadow-lg">
               <Image
                 src={BgDonasi}
                 alt="Bg"
@@ -99,6 +99,7 @@ function DetailDonasi() {
                   shadow
                 />
                 <Button
+                href="/donasi/pembayaran"
                   text="Donasi Sekarang"
                   type="primary"
                   size="large"
@@ -110,7 +111,7 @@ function DetailDonasi() {
           </div>
           <Link
             href={"/donasi/laporkan"}
-            className="flex gap-1 my-1 hover:underline"
+            className="flex gap-1 mt-4 hover:underline"
           >
             <p className="text-sm">
               Kampanye ini mencurigakan?{" "}

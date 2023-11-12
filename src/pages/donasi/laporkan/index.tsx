@@ -6,10 +6,19 @@ import Logo from "@/assets/images/logo.png";
 import Input from "@/components/input";
 import InputFile from "@/components/inputFile";
 import ButtonSubmit from "@/components/buttonSubmit";
+import useSnackbar from "@/hooks/useSnackbar";
 
 function Laporkan() {
+  const { Snackbar, showSnackbar } = useSnackbar();
+  const handleSnack = () => {
+    showSnackbar(true, null);
+    setTimeout(() => {
+      showSnackbar(false, null);
+    }, 3000);
+  };
   return (
     <Layout>
+      <Snackbar />
       <section className="mt-20 px-24">
         <div className="w-full flex flex-col py-20">
           <div className="flex gap-6">
@@ -89,6 +98,7 @@ function Laporkan() {
               </label>
             </div>
             <ButtonSubmit
+              onClick={handleSnack}
               text="Kirim"
               type="border"
               size="large"

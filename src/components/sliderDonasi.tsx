@@ -14,7 +14,7 @@ type sliderDonasi = {
 function SliderDonasi(props: sliderDonasi) {
     const [status, setStatus] = React.useState(props.status);
   return (
-    <div className="w-full relative flex justify-center px-24 mt-10">
+    <div className="w-full relative flex justify-center px-24">
       <div className="prev z-10 left-0 h-full absolute flex items-center pl-4 px-6 justify-center hover:bg-primary-200 hover:bg-opacity-30 ">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -44,49 +44,69 @@ function SliderDonasi(props: sliderDonasi) {
           el: ".swiper-pagination",
           clickable: true,
         }}
-        className="w-full overflow-hidden"
+        className="w-full overflow-hidden py-10"
       >
         <SwiperSlide>
           <CardDonasi
+            title="Donasi untuk pohon di kampung nan"
+            id="1"
             nama="Nan"
             jumlahPohon="730"
-            img={Donasi}
+            img={
+              "https://images.unsplash.com/photo-1699417824045-5c9ffdc32740?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            }
             sisaHari="2"
             slider
           />
         </SwiperSlide>
         <SwiperSlide>
           <CardDonasi
+            title="Donasi untuk pohon di kampung nan"
+            id="2"
             nama="Ayak"
-            jumlahPohon="810"
-            img={Donasi}
+            jumlahPohon="730"
+            img={
+              "https://images.unsplash.com/photo-1699417824045-5c9ffdc32740?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            }
             sisaHari="2"
             slider
           />
         </SwiperSlide>
         <SwiperSlide>
           <CardDonasi
-            nama="Alwy"
-            jumlahPohon="410"
-            img={Donasi}
-            sisaHari="2"
-            slider
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <CardDonasi
+            title="Donasi untuk pohon di kampung nan"
+            id="3"
             nama="Daden"
-            jumlahPohon="640"
-            img={Donasi}
+            jumlahPohon="730"
+            img={
+              "https://images.unsplash.com/photo-1699417824045-5c9ffdc32740?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            }
             sisaHari="2"
             slider
           />
         </SwiperSlide>
         <SwiperSlide>
           <CardDonasi
-            nama="Aluh"
-            jumlahPohon="240"
-            img={Donasi}
+            title="Donasi untuk pohon di kampung nan"
+            id="4"
+            nama="Alwy"
+            jumlahPohon="730"
+            img={
+              "https://images.unsplash.com/photo-1699417824045-5c9ffdc32740?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            }
+            sisaHari="2"
+            slider
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <CardDonasi
+            title="Donasi untuk pohon di kampung nan"
+            id="5"
+            nama="Nanda"
+            jumlahPohon="730"
+            img={
+              "https://images.unsplash.com/photo-1699417824045-5c9ffdc32740?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            }
             sisaHari="2"
             slider
           />

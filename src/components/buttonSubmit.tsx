@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import Image from "next/image";
 
 type ButtonProps = {
@@ -10,11 +10,11 @@ type ButtonProps = {
   size?: "small" | "medium" | "large" | "xlarge";
   shadow?: boolean;
   href?: string;
+  onClick?: () => void;
 };
 
-
 function ButtonSubmit(props: ButtonProps) {
-     const shadowClass = props.shadow ? "shadow-outline-primary" : "";
+  const shadowClass = props.shadow ? "shadow-outline-primary" : "";
   const typeClass =
     props.type === "primary"
       ? "bg-primary-600 border-2 border-primary-600 text-white"
@@ -36,13 +36,13 @@ function ButtonSubmit(props: ButtonProps) {
       ? "p-xlarge"
       : "p-medium";
 
-
   return (
-    <button 
-      type='submit'
+    <button
+      onClick={props.onClick}
+      type="submit"
       className={`flex items-center justify-center gap-2 rounded-md cursor-pointer ${shadowClass} ${typeClass} ${sizeClass} ${props.custom}`}
     >
-      <p className={props.textCustom }>{props.text}</p>
+      <p className={props.textCustom}>{props.text}</p>
       {props.icon && (
         <Image
           src={props.icon}
@@ -53,7 +53,7 @@ function ButtonSubmit(props: ButtonProps) {
         />
       )}
     </button>
-  )
+  );
 }
 
-export default ButtonSubmit
+export default ButtonSubmit;

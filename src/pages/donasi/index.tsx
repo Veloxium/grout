@@ -5,8 +5,8 @@ import Image from "next/image";
 import Background2 from "@/assets/images/background2.png";
 import Buat from "@/assets/images/buat.png";
 import CardDonasi from "@/components/cardDonasi";
-import DonasiImg from "@/assets/images/donasi.jpeg";
 import donasiData from "@/json/donasi.json";
+import axios from "axios";
 
 function Donasi() {
   const [kampanye, setKampanye] = useState("semua");
@@ -15,7 +15,29 @@ function Donasi() {
 
   const [cardNum, setCardNum] = useState<number>(0);
 
+  const [dataImages, setDataImages] = useState([]);
+
+  const [description, setDescription] = useState([]);
+
+  const [showCard, setShowCard] = useState<boolean>(false);
+
   const donasi = donasiData.donasiData;
+
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const response = await axios.get(
+  //         "https://api.unsplash.com/photos/random?count=12&client_id=BGl4_ffPaiRr2CehGCFqPr756IDDikZRt6ASA3u8Iq0"
+  //       );
+  //       setDataImages(response.data.map((item: any) => item.urls.regular));
+  //       setDescription(response.data.map((item: any) => item.alt_description));
+  //       setShowCard(true);
+  //     } catch (error) {
+  //       console.error("Error fetching data:", error);
+  //     }
+  //   };
+  //   fetchData();
+  // }, [currentCardPage]);
 
   const handleKampanye = (e: any) => {
     e.preventDefault();
@@ -33,7 +55,7 @@ function Donasi() {
   // console.log(currentCardPage);
 
   const nextCardPage = () => {
-    if (currentCardPage === (donasi.length / 12 )) {
+    if (currentCardPage === donasi.length / 12) {
       return;
     }
     setCurrentCardPage(currentCardPage + 1);
@@ -160,20 +182,19 @@ function Donasi() {
         </div>
         <div className="flex flex-col gap-10 py-14 px-24">
           <div className="grid grid-cols-4 place-items-center gap-10">
-            {donasi
-              .slice(cardNum, cardNum + 12)
-              .map((item, index) => (
-                <CardDonasi
-                  id={item.id.toString()}
-                  key={index}
-                  img={DonasiImg}
-                  jumlahPohon={item.jumlahPohon}
-                  nama={item.nama}
-                  sisaHari={item.sisaHari}
-                  
-                />
-              ))}
+            {donasi.slice(cardNum, cardNum + 12).map((item, index) => (
+              <CardDonasi
+                id={item.id.toString()}
+                key={index}
+                title={`Kampanye ${item.id}`}
+                img={`https://source.unsplash.com/random/200x200?sig=${item.id}`}
+                jumlahPohon={item.jumlahPohon}
+                nama={item.nama}
+                sisaHari={item.sisaHari}
+              />
+            ))}
           </div>
+
           <div className="flex gap-6 justify-center my-10">
             <div
               onClick={prevCardPage}
