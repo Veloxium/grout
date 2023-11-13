@@ -39,7 +39,6 @@ function ButtonSubmit(props: ButtonProps) {
   return (
     <button
       onClick={props.onClick}
-      type="submit"
       className={`flex items-center justify-center gap-2 rounded-md cursor-pointer ${shadowClass} ${typeClass} ${sizeClass} ${props.custom}`}
     >
       <p className={props.textCustom}>{props.text}</p>

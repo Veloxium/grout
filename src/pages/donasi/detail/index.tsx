@@ -91,6 +91,7 @@ function DetailDonasi() {
               </div>
               <div className="flex justify-between gap-16">
                 <Button
+                href="/donasi/pembayaran?id=1"
                   text="Gabung Aksi"
                   textCustom="font-bold text-primary-600"
                   custom="w-full"
@@ -149,7 +150,7 @@ function DetailDonasi() {
               {desc ? (
                 <div className="flex flex-col gap-2 px-6 py-8 text-justify">
                   {details.detail.split("\n\n").map((e, i) => (
-                    <p className={i == 0 ? "font-semibold" : ""}>{e}</p>
+                    <p key={i} className={i == 0 ? "font-semibold" : ""}>{e}</p>
                   ))}
                 </div>
               ) : (

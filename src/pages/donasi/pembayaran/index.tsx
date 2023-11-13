@@ -3,16 +3,35 @@ import Input from "@/components/input";
 import Layout from "@/layout/layout";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { FormEvent, useState } from "react";
 import Bsi from "@/assets/images/bsi.png";
 import Bni from "@/assets/images/bni.png";
 import Btn from "@/assets/images/btn.png";
 import Bri from "@/assets/images/bri.png";
 import Ntb from "@/assets/images/ntb.png";
 import Mandiri from "@/assets/images/mandiri.png";
+import ButtonSubmit from "@/components/buttonSubmit";
+import { useRouter } from "next/router";
 
 function Pembayaran() {
   const [show, setShow] = useState(false);
+  const [bank, setBank] = useState("Pilih");
+  const router = useRouter();
+  const { id } = router.query;
+
+  async function handlePembayaran(e: FormEvent) {
+    e.preventDefault();
+    const formElement = e.target as HTMLFormElement;
+    const formData = new FormData(formElement);
+    const formDataJson = Object.fromEntries(formData.entries());
+    console.log(formDataJson);
+    router.push(`/donasi/pembayaran/va`);
+  }
+
+  const handleBank = (bank: string) => {
+    setBank(bank);
+    setShow(!show);
+  };
 
   return (
     <Layout>
@@ -27,9 +46,13 @@ function Pembayaran() {
           </p>
         </div>
         <div className="flex flex-col w-full px-24 py-14">
-          <div className="flex gap-20">
-            <div className="w-1/2">
-              <form action="submit">
+          <div>
+            <form
+              action="submit"
+              onSubmit={handlePembayaran}
+              className="flex gap-20"
+            >
+              <div className="w-1/2">
                 <div className="flex flex-col gap-2">
                   <p className="font-bold">Nominal Donasi</p>
                   <div className="flex gap-10">
@@ -56,7 +79,7 @@ function Pembayaran() {
                   </p>
                 </div>
                 <div className="flex flex-col items-center py-6 my-4 border-y-2 border-slate-400">
-                  <div className="flex justify-between w-full">
+                  <div className="flex justify-between w-full items-center">
                     <p className="font-bold">Metode Pembayaran</p>
                     <div
                       onClick={() => {
@@ -64,7 +87,7 @@ function Pembayaran() {
                       }}
                       className="flex items-center gap-2 bg-primary-600 px-6 py-2 text-white rounded-lg cursor-pointer"
                     >
-                      <p className="font-semibold">{show ? "Tutup" : "Pilih"}</p>
+                      <p className="font-semibold">{show ? "Tutup" : bank}</p>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -122,7 +145,10 @@ function Pembayaran() {
                     </div> */}
                         </div>
                         <div>
-                          <div className="flex items-center pl-6 cursor-pointer  hover:bg-gray-100 gap-4 border-t-2 ">
+                          <div
+                            onClick={() => handleBank("BSI")}
+                            className="flex items-center pl-6 cursor-pointer  hover:bg-gray-100 gap-4 border-t-2 "
+                          >
                             <Image
                               src={Bsi}
                               alt="bank"
@@ -132,7 +158,10 @@ function Pembayaran() {
                             />
                             <p className="text-sm">Bank Syariah Indonesia</p>
                           </div>
-                          <div className="flex items-center pl-6 cursor-pointer  hover:bg-gray-100 gap-4 border-t-2">
+                          <div
+                            onClick={() => handleBank("Bank BNI")}
+                            className="flex items-center pl-6 cursor-pointer  hover:bg-gray-100 gap-4 border-t-2"
+                          >
                             <Image
                               src={Bni}
                               alt="bank"
@@ -142,7 +171,10 @@ function Pembayaran() {
                             />
                             <p className="text-sm">Bank BNI</p>
                           </div>
-                          <div className="flex items-center pl-6 cursor-pointer  hover:bg-gray-100 gap-4 border-t-2">
+                          <div
+                            onClick={() => handleBank("Bank BTN")}
+                            className="flex items-center pl-6 cursor-pointer  hover:bg-gray-100 gap-4 border-t-2"
+                          >
                             <Image
                               src={Btn}
                               alt="bank"
@@ -152,7 +184,10 @@ function Pembayaran() {
                             />
                             <p className="text-sm">Bank BTN</p>
                           </div>
-                          <div className="flex items-center pl-6 cursor-pointer  hover:bg-gray-100 gap-4 border-t-2">
+                          <div
+                            onClick={() => handleBank("Bank BRI")}
+                            className="flex items-center pl-6 cursor-pointer  hover:bg-gray-100 gap-4 border-t-2"
+                          >
                             <Image
                               src={Bri}
                               alt="bank"
@@ -162,7 +197,10 @@ function Pembayaran() {
                             />
                             <p className="text-sm">Bank BRI</p>
                           </div>
-                          <div className="flex items-center pl-6 cursor-pointer  hover:bg-gray-100 gap-4 border-t-2">
+                          <div
+                            onClick={() => handleBank("Bank NTB")}
+                            className="flex items-center pl-6 cursor-pointer  hover:bg-gray-100 gap-4 border-t-2"
+                          >
                             <Image
                               src={Ntb}
                               alt="bank"
@@ -172,7 +210,10 @@ function Pembayaran() {
                             />
                             <p className="text-sm">Bank NTB Syariah</p>
                           </div>
-                          <div className="flex items-center pl-6 cursor-pointer  hover:bg-gray-100 gap-4 border-t-2">
+                          <div
+                            onClick={() => handleBank("Bank Mandiri")}
+                            className="flex items-center pl-6 cursor-pointer  hover:bg-gray-100 gap-4 border-t-2"
+                          >
                             <Image
                               src={Mandiri}
                               alt="bank"
@@ -188,6 +229,13 @@ function Pembayaran() {
                   )}
                 </div>
                 <div className="flex flex-col gap-4">
+                  <Input
+                    name="pembayaran"
+                    type="text"
+                    value={bank}
+                    custom="hidden"
+                    readonly={true}
+                  />
                   <Input
                     label="Nama"
                     name="nama"
@@ -231,35 +279,34 @@ function Pembayaran() {
                     />
                   </div>
                 </div>
-              </form>
-            </div>
-            <div className="w-1/2 flex h-min flex-col gap-4 p-6 border-2 rounded-lg shadow-lg">
-              <p className="font-bold">Rincian Pembayaran</p>
-              <div className="flex flex-col gap-4 my-4">
-                <div className="flex justify-between">
-                  <p>Donasi</p>
-                  <p>Rp. 480.000.000</p>
+              </div>
+              <div className="w-1/2 flex h-min flex-col gap-4 p-6 border-2 rounded-lg shadow-lg">
+                <p className="font-bold">Rincian Pembayaran</p>
+                <div className="flex flex-col gap-4 my-4">
+                  <div className="flex justify-between">
+                    <p>Donasi</p>
+                    <p>Rp. 480.000.000</p>
+                  </div>
+                  <div className="flex justify-between">
+                    <p>Biaya Admin</p>
+                    <p>Rp. 140.000</p>
+                  </div>
+                  <div className="flex justify-between border-t-2 border-slate-400 pt-4">
+                    <p className="font-bold">Total</p>
+                    <p className="font-bold">Rp. 480.140.000</p>
+                  </div>
                 </div>
-                <div className="flex justify-between">
-                  <p>Biaya Admin</p>
-                  <p>Rp. 140.000</p>
-                </div>
-                <div className="flex justify-between border-t-2 border-slate-400 pt-4">
-                  <p className="font-bold">Total</p>
-                  <p className="font-bold">Rp. 480.140.000</p>
+                <div className="flex">
+                  <ButtonSubmit
+                    text="Donasi"
+                    type="primary"
+                    size="large"
+                    custom="w-full"
+                    textCustom="font-bold "
+                  />
                 </div>
               </div>
-              <div className="flex">
-                <Button
-                  href="/donasi/pembayaran"
-                  text="Donasi"
-                  type="primary"
-                  size="large"
-                  custom="w-full"
-                  textCustom="font-bold "
-                />
-              </div>
-            </div>
+            </form>
           </div>
         </div>
       </section>

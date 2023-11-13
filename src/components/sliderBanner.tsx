@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import Banner1 from "@/assets/images/banner1.jpeg";
-import Banner2 from "@/assets/images/banner2.jpeg";
-import Banner3 from "@/assets/images/banner3.jpeg";
-import Banner4 from "@/assets/images/banner4.jpeg";
+import Banner1 from "@/assets/images/banner1.png";
+import Banner2 from "@/assets/images/banner2.png";
+import Banner3 from "@/assets/images/banner3.png";
+import Banner4 from "@/assets/images/banner4.png";
 
 function SliderBanner() {
   const contents = [
@@ -61,7 +61,7 @@ function SliderBanner() {
           width={0}
           height={0}
           decoding="sync"
-          className="duration-500 w-full z-10 aspect-[18/6] brightness-50 object-cover"
+          className="duration-500 w-full z-10 aspect-[18/6] brightness-75 object-cover"
           loading="eager"
         />
         <button

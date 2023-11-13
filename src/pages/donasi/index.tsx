@@ -22,6 +22,7 @@ function Donasi() {
   const [showCard, setShowCard] = useState<boolean>(false);
 
   const donasi = donasiData.donasiData;
+  
 
   // useEffect(() => {
   //   const fetchData = async () => {
