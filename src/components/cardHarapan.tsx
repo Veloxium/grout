@@ -4,7 +4,7 @@ import Profile from "@/assets/images/profile.jpg";
 
 function CardHarapan() {
   return (
-    <div className="card flex flex-col w-[250px] p-4 rounded-lg border shadow-lg">
+    <div className="card flex flex-col w-full p-4 rounded-lg border shadow-lg">
       <div className="flex justify-center items-center gap-4">
         <Image
           src={Profile}

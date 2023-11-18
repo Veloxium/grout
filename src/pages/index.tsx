@@ -139,7 +139,7 @@ export default function Home() {
           Harapan Teman GrOUT
         </p>
         <div className="w-[200px] h-1 bg-slate-700 mt-6 rounded-md"></div>
-        <div className="container flex justify-between my-16">
+        <div className="container flex justify-between my-16 gap-14">
           <CardHarapan />
           <CardHarapan />
           <CardHarapan />
