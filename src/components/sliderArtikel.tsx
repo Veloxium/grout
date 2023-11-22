@@ -58,8 +58,8 @@ function SliderArtikel() {
         <Image
           src={contents[currentIndex].url}
           alt=""
-          width={0}
-          height={0}
+          width={700}
+          height={700}
           decoding="sync"
           className="duration-500 w-full z-10 aspect-[2/1] brightness-75 object-cover"
           loading="eager"

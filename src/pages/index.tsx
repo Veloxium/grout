@@ -130,7 +130,7 @@ export default function Home() {
         <p className="font-semibold text-3xl text-slate-700">
           Gallery Teman GrOUT
         </p>
-        <div className="w-[130px] h-1 bg-slate-700 mt-6 rounded-md"></div>
+        <div className="w-[230px] h-1 bg-slate-700 mt-6 rounded-md"></div>
         <SliderBanner />
       </section>
       <section className="flex flex-col items-center py-20">

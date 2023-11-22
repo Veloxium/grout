@@ -31,7 +31,7 @@ function Navbar() {
 
   return (
     <header>
-      <nav className="fixed w-full top-0 bg-white px-24 py-2 flex items-center justify-between shadow-md z-50">
+      <nav className="fixed w-full top-0 bg-white px-24 py-1 flex items-center justify-between shadow-md z-50">
         <div className="logo">
           <div
             className="cursor-pointer"
@@ -48,7 +48,7 @@ function Navbar() {
               alt="Logo"
               width={400}
               height={400}
-              className="object-contain w-44"
+              className="object-contain w-36"
             />
           </div>
         </div>
@@ -77,7 +77,7 @@ function Navbar() {
           <Button
             text="Masuk"
             textCustom="font-bold"
-            size="large"
+            size="medium"
             type="primary"
             href="/masuk"
             shadow
@@ -85,7 +85,7 @@ function Navbar() {
           <Button
             text="Daftar"
             textCustom="font-bold text-primary-600"
-            size="large"
+            size="medium"
             type="accent"
             href="/daftar"
             shadow

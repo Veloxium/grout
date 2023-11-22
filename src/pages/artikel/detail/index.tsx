@@ -116,7 +116,7 @@ function DetailArtikel() {
             <p>Oleh Nanda Pake Z.</p>
             <p>Rabu, 22 November 2023</p>
           </div>
-          <div className="w-full flex flex-col items-end px-24 gap-2">
+          <div className="w-full h-[600px] overflow-hidden flex flex-col items-end px-24 gap-2">
             <Image src={Jo} alt="jo" className="object-cover w-full" />
             <p>Jonathan Liandi/Propler Ml/</p>
           </div>
