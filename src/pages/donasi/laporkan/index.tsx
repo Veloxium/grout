@@ -7,13 +7,16 @@ import Input from "@/components/input";
 import InputFile from "@/components/inputFile";
 import ButtonSubmit from "@/components/buttonSubmit";
 import useSnackbar from "@/hooks/useSnackbar";
+import { useRouter } from "next/router";
 
 function Laporkan() {
   const { Snackbar, showSnackbar } = useSnackbar();
+  const router = useRouter();
   const handleSnack = () => {
     showSnackbar(true, null);
     setTimeout(() => {
       showSnackbar(false, null);
+      router.push("/donasi");
     }, 3000);
   };
   return (

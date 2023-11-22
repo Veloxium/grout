@@ -123,11 +123,10 @@ export default function Home() {
           type="border"
           size="xlarge"
           textCustom="text-black font-semibold"
-          custom="mt-16"
           shadow
         />
       </section>
-      <section className="flex flex-col items-center py-20">
+      <section className="flex flex-col items-center pb-20">
         <p className="font-semibold text-3xl text-slate-700">
           Gallery Teman GrOUT
         </p>
@@ -139,7 +138,7 @@ export default function Home() {
           Harapan Teman GrOUT
         </p>
         <div className="w-[200px] h-1 bg-slate-700 mt-6 rounded-md"></div>
-        <div className="container flex justify-between my-16 gap-14">
+        <div className="container flex justify-between my-20 gap-10">
           <CardHarapan />
           <CardHarapan />
           <CardHarapan />

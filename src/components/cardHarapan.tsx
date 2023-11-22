@@ -19,8 +19,7 @@ function CardHarapan() {
         </div>
       </div>
       <p className="mt-6 text-justify">
-        Semoga setiap pohon yang kita tanam menjadi akar kebaikan, dan
-        memberikan hawa segar bagi bumi kita 😍
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio iure culpa veritatis, quasi alias temporibus numquam eligendi quas ea repellendus?😍
       </p>
     </div>
   );

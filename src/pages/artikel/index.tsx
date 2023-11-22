@@ -8,6 +8,15 @@ import CardArtikel from "@/components/cardArtikel";
 
 function Artikel() {
   const [allArtikel, setAllArtikel] = useState("semua");
+  const [currentCardPage, setCurrentCardPage] = useState<number>(1);
+  const handlepagination = (e: any) => {
+    setCurrentCardPage(Number(e));
+    // setCardNum((e - 1) * 12);
+    const element = document.getElementById("artikelContainer");
+    if(element){
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   const handleArtikel = (e: any) => {
     e.preventDefault();
@@ -86,7 +95,10 @@ function Artikel() {
         <div className="flex w-full px-24 pb-10 gap-6">
           <div className="w-3/4 flex flex-col">
             <SliderArtikel />
-            <div className="mt-10">
+            <div
+              id="artikelContainer"
+              className="mt-10 flex flex-col border-b-4"
+            >
               <CardArtikel />
               <CardArtikel />
               <CardArtikel />
@@ -102,21 +114,94 @@ function Artikel() {
                 className="absolute -z-10 w-full h-full object-cover"
               />
               <div className="flex flex-col p-6 justify-center hover:bg-white hover:bg-opacity-40">
-                <p className="font-semibold text-xl">1,290 Pohon</p>
-                <p>Jumlah Donasi pohon saat ini</p>
+                <p className="font-semibold text-xl drop-shadow-lg">1,290 Pohon</p>
+                <p className="drop-shadow-lg">Jumlah Donasi pohon saat ini</p>
               </div>
               <div className="flex flex-col p-6 justify-center hover:bg-white hover:bg-opacity-40">
-                <p className="font-semibold text-xl">1,290 Pohon</p>
-                <p>Jumlah Donasi pohon saat ini</p>
+                <p className="font-semibold text-xl drop-shadow-lg">1,290 Pohon</p>
+                <p className="drop-shadow-lg">Jumlah Donasi pohon saat ini</p>
               </div>
               <div className="flex flex-col p-6 justify-center hover:bg-white hover:bg-opacity-40">
-                <p className="font-semibold text-xl">1,290 Pohon</p>
-                <p>Jumlah Donasi pohon saat ini</p>
+                <p className="font-semibold text-xl drop-shadow-lg">1,290 Pohon</p>
+                <p className="drop-shadow-lg">Jumlah Donasi pohon saat ini</p>
               </div>
               <div className="flex flex-col p-6 justify-center hover:bg-white hover:bg-opacity-40">
-                <p className="font-semibold text-xl">1,290 Pohon</p>
-                <p>Jumlah Donasi pohon saat ini</p>
+                <p className="font-semibold text-xl drop-shadow-lg">1,290 Pohon</p>
+                <p className="drop-shadow-lg">Jumlah Donasi pohon saat ini</p>
               </div>
+            </div>
+          </div>
+        </div>
+        <div className="flex gap-6 justify-center">
+          <div className="flex gap-6 justify-center my-10">
+            <div
+              // onClick={prevCardPage}
+              className="w-10 h-10 text-primary-600 border-2 grid place-items-center rounded-lg hover:bg-primary-600 hover:text-white ease-in-out transition-all cursor-pointer border-primary-600"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={3}
+                stroke="currentColor"
+                className="w-4 h-4"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75"
+                />
+              </svg>
+            </div>
+            <div className="flex gap-6">
+              {[...Array(96 / 12 + 1)]
+                .slice(
+                  currentCardPage > 3 ? currentCardPage - 2 : 0,
+                  currentCardPage > 3 ? currentCardPage + 3 : 5
+                )
+                .map((_, i) =>
+                  currentCardPage > 3 ? (
+                    <div
+                      onClick={() => handlepagination(currentCardPage - 2 + i)}
+                      key={i}
+                      className={`w-10 h-10 text-primary-600 border-2 grid place-items-center rounded-lg hover:bg-primary-600 hover:text-white ease-in-out transition-all cursor-pointer border-primary-600 ${
+                        currentCardPage === currentCardPage - 2 + i &&
+                        "bg-primary-600 text-white"
+                      }`}
+                    >
+                      <p>{currentCardPage - 2 + i}</p>
+                    </div>
+                  ) : (
+                    <div
+                      onClick={() => handlepagination(1 + i)}
+                      key={i}
+                      className={`w-10 h-10 text-primary-600 border-2 grid place-items-center rounded-lg hover:bg-primary-600 hover:text-white ease-in-out transition-all cursor-pointer border-primary-600 ${
+                        currentCardPage === 1 + i && "bg-primary-600 text-white"
+                      }`}
+                    >
+                      <p>{1 + i}</p>
+                    </div>
+                  )
+                )}
+            </div>
+            <div
+              // onClick={nextCardPage}
+              className="w-10 h-10 text-primary-600 border-2 grid place-items-center rounded-lg hover:bg-primary-600 hover:text-white ease-in-out transition-all cursor-pointer border-primary-600"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={3}
+                stroke="currentColor"
+                className="w-4 h-4"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
+                />
+              </svg>
             </div>
           </div>
         </div>

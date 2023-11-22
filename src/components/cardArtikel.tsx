@@ -5,8 +5,8 @@ import Link from "next/link";
 
 function CardArtikel() {
   return (
-    <Link href={"#"} className="w-full flex gap-6 border-t-4 py-4 hover:bg-slate-50" >
-      <div className="w-1/2 flex flex-col gap-2 justify-center px-2">
+    <Link href={"/artikel/detail"} className="w-full flex gap-6 border-t-4 hover:bg-slate-50" >
+      <div className="w-1/2 flex flex-col gap-2 py-4 px-2 justify-center">
         <p className="font-bold text-2xl line-clamp-3">
           Jo Effect pada MPL Season 12. Bagaimanakah Pengaruhnya dalam menonton
           MPL dengan Livestreaming?
@@ -20,7 +20,7 @@ function CardArtikel() {
         </p>
         <p className="font-bold">THE CONVERSATION | 23 JAM</p>
       </div>
-      <div className="w-1/2">
+      <div className="w-1/2 py-4 flex items-center">
         <Image src={Jo} alt="jo" className="w-full object-cover h-[250px]" />
       </div>
     </Link>

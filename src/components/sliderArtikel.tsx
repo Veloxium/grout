@@ -9,23 +9,23 @@ function SliderArtikel() {
   const contents = [
     {
       url: Banner1,
-      title: "Ini Hutan Saya",
-      desc: "Pokoknya ini punya saya jangan diambil ya, kalo diambil digigit nyamuk",
+      title: "The Close The Door | 23 JAM",
+      desc: "Buwung Apa Tu Man? Buwung Puyuh.",
     },
     {
       url: Banner2,
-      title: "Ini Hutan Kamu",
-      desc: "Pokoknya ini punya kamu harus diambil ya, kalo gak diambil digigit nyamuk",
+      title: "Kipas.com | 23 JAM",
+      desc: "Apakah Benar Bumi itu Berbentuk Prisma Segitiga? Inilah Fakta-Faktanya!",
     },
     {
       url: Banner3,
-      title: "Ini Hutan Saya",
-      desc: "Pokoknya ini punya saya jangan diambil ya, kalo diambil digigit nyamuk",
+      title: "The Close The Door | 23 JAM",
+      desc: "Buwung Apa Tu Man? Buwung Puyuh.",
     },
     {
       url: Banner4,
-      title: "Ini Hutan Kamu",
-      desc: "Pokoknya ini punya kamu harus diambil ya, kalo gak diambil digigit nyamuk",
+      title: "Kipas.com | 23 JAM",
+      desc: "Apakah Benar Bumi itu Berbentuk Prisma Segitiga? Inilah Fakta-Faktanya!",
     },
   ];
 
@@ -64,9 +64,10 @@ function SliderArtikel() {
           className="duration-500 w-full z-10 aspect-[2/1] brightness-75 object-cover"
           loading="eager"
         />
+        <div className="bg-gradient-to-t from-slate-900 via-transparent to-transparent h-full w-full z-10 absolute bottom-0"></div>
         <button
           onClick={prevSlide}
-          className="text-4xl p-6 absolute text-white z-20 left-0 hover:bg-slate-200 hover:bg-opacity-30 h-full"
+          className="text-4xl p-6 absolute text-white z-20 left-0 hover:bg-slate-200 hover:bg-opacity-20 h-full"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -85,7 +86,7 @@ function SliderArtikel() {
         </button>
         <button
           onClick={nextSlide}
-          className="text-4xl p-6 absolute text-white z-20 right-0 hover:bg-slate-200 hover:bg-opacity-30 h-full"
+          className="text-4xl p-6 absolute text-white z-20 right-0 hover:bg-slate-200 hover:bg-opacity-20 h-full"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -102,11 +103,11 @@ function SliderArtikel() {
             />
           </svg>
         </button>
-        <div className="absolute z-10 w-full px-24 bottom-8">
-          <p className="text-xl text-white font-bold">
+        <div className="absolute z-10 w-full px-10 bottom-8 ">
+          <p className="text-xl text-white font-bold  drop-shadow-lg">
             {contents[currentIndex].title}
           </p>
-          <p className="text-2xl text-white font-semibold">
+          <p className="text-4xl text-white font-bold  drop-shadow-lg">
             {contents[currentIndex].desc}
           </p>
         </div>

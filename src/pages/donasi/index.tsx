@@ -7,6 +7,7 @@ import Buat from "@/assets/images/buat.png";
 import CardDonasi from "@/components/cardDonasi";
 import donasiData from "@/json/donasi.json";
 import axios from "axios";
+import BannerKampanye from "@/components/bannerKampanye";
 
 function Donasi() {
   const [kampanye, setKampanye] = useState("semua");
@@ -15,30 +16,7 @@ function Donasi() {
 
   const [cardNum, setCardNum] = useState<number>(0);
 
-  const [dataImages, setDataImages] = useState([]);
-
-  const [description, setDescription] = useState([]);
-
-  const [showCard, setShowCard] = useState<boolean>(false);
-
   const donasi = donasiData.donasiData;
-  
-
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       const response = await axios.get(
-  //         "https://api.unsplash.com/photos/random?count=12&client_id=BGl4_ffPaiRr2CehGCFqPr756IDDikZRt6ASA3u8Iq0"
-  //       );
-  //       setDataImages(response.data.map((item: any) => item.urls.regular));
-  //       setDescription(response.data.map((item: any) => item.alt_description));
-  //       setShowCard(true);
-  //     } catch (error) {
-  //       console.error("Error fetching data:", error);
-  //     }
-  //   };
-  //   fetchData();
-  // }, [currentCardPage]);
 
   const handleKampanye = (e: any) => {
     e.preventDefault();
@@ -49,9 +27,10 @@ function Donasi() {
     setCurrentCardPage(Number(e));
     setCardNum((e - 1) * 12);
     // setPaginationNum(e - 1);
-    document
-      .getElementById("donasiContainer")
-      ?.scrollIntoView({ behavior: "smooth" });
+    const element = document.getElementById("donasiContainer");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
   };
   // console.log(currentCardPage);
 
@@ -86,8 +65,8 @@ function Donasi() {
             className="w-screen h-full object-cover"
           />
         </div>
-        <div className="px-24 flex flex-col justify-center pb-20 h-screen">
-          <div className="flex flex-col justify-center w-full mt-28">
+        <div className="px-24 flex flex-col justify-center pt-20 h-screen">
+          <div className="flex flex-col justify-center w-full">
             <p className="text-5xl font-bold drop-shadow-lg">
               Tumbuhkan Kehidupan
             </p>
@@ -109,21 +88,7 @@ function Donasi() {
       </section>
       <section>
         <div className="px-24 py-10 h-[400px]">
-          <div className="relative flex flex-col justify-center px-10 h-full rounded-xl overflow-hidden shadow-lg">
-            <div className="absolute flex items-center top-0 left-0 w-full h-full -z-10">
-              <Image
-                src={Buat}
-                alt="buat kampanye"
-                className="w-full object-cover"
-              />
-            </div>
-            <div>
-              <p className="text-4xl font-bold max-w-[400px] text-secondary-600 mb-4">
-                Buat Kampanye Pohon Kamu Sekarang!
-              </p>
-              <Button text="Buat Kampanye" type="primary" />
-            </div>
-          </div>
+          <BannerKampanye />
         </div>
       </section>
       <section>
