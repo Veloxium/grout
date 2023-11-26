@@ -153,7 +153,7 @@ function Daftar() {
                   <span
                     className="text-blue-600 cursor-pointer hover:underline"
                     onClick={() => {
-                      router.push("/sdk");
+                      router.push("/daftar/sdk");
                     }}
                   >
                     Syarat dan Ketentuan

@@ -77,7 +77,7 @@ function Donasi() {
               Yuk, Donasikan Pohon untuk Masa Depan Hijau
             </p>
             <Button
-              href="/donasi"
+              href="/donasi/bersamagrout"
               text="Mulai Donasi"
               size="xlarge"
               type="primary"

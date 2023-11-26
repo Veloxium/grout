@@ -244,6 +244,7 @@ export default function Home() {
           </p>
           <div className="flex gap-20">
             <Button
+              href="/buatkampanye"
               text="Buat Kampanye"
               size="xlarge"
               type="primary"

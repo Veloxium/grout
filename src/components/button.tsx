@@ -11,6 +11,7 @@ type ButtonProps = {
   size?: "small" | "medium" | "large" | "xlarge";
   shadow?: boolean;
   href?: string;
+  disabled?: boolean;
 };
 
 function Button(props: ButtonProps) {
@@ -23,7 +24,7 @@ function Button(props: ButtonProps) {
       : props.type === "accent"
       ? "bg-primary-50 border-2 border-primary-50"
       : props.type === "border"
-      ? "border-2 border-primary-600"
+      ? props.disabled ? "bg-white border-2 border-slate-200" : "border-2 border-primary-600"
       : "bg-primary-600 border-2 border-primary-600";
   const sizeClass =
     props.size === "small"
@@ -36,9 +37,24 @@ function Button(props: ButtonProps) {
       ? "p-xlarge"
       : "p-medium";
 
-  return (
-    <Link 
-      href={props.href  ? props.href : "/"}
+  return props.disabled ? (
+    <div
+      className={`inline-flex text-white items-center justify-center gap-2 rounded-md cursor-pointer ${shadowClass} ${typeClass} ${sizeClass} ${props.custom}`}
+    >
+      <p className={props.textCustom}>{props.text}</p>
+      {props.icon && (
+        <Image
+          src={props.icon}
+          width={20}
+          height={20}
+          alt={props.text}
+          className="object-contain text-white"
+        />
+      )}
+    </div>
+  ) : (
+    <Link
+      href={props.href ? props.href : ""}
       className={`inline-flex text-white items-center justify-center gap-2 rounded-md cursor-pointer ${shadowClass} ${typeClass} ${sizeClass} ${props.custom}`}
     >
       <p className={props.textCustom}>{props.text}</p>

@@ -14,6 +14,44 @@ function DetailDonasi() {
   const id = 0;
   const details = detailDonasi.detailDonasi[id];
 
+  const Donatur = [
+    {
+      id: 1,
+      nama: "Alwi",
+      jumlah: 100,
+    },
+    {
+      id: 2,
+      nama: "Budi",
+      jumlah: 50,
+    },
+    {
+      id: 3,
+      nama: "Caca",
+      jumlah: 40,
+    },
+    {
+      id: 4,
+      nama: "Fafa",
+      jumlah: 10,
+    },
+    {
+      id: 5,
+      nama: "Andi",
+      jumlah: 80,
+    },
+    {
+      id: 6,
+      nama: "Dedi",
+      jumlah: 30,
+    },
+    {
+      id: 7,
+      nama: "Eka",
+      jumlah: 20,
+    },
+  ];
+
   return (
     <Layout>
       <section>
@@ -22,7 +60,9 @@ function DetailDonasi() {
           <p className="text-3xl">
             EXO-TREES: “Save Our World with EXO, WE ARE ONE!”
           </p>
-          <p className="bg-primary-600 text-white rounded-full px-2 mt-2">Mangrove Rhizophora</p>
+          <p className="bg-primary-600 text-white rounded-full px-2 mt-2">
+            Mangrove Rhizophora
+          </p>
         </div>
         <div className="flex flex-col w-full px-24 py-14">
           <div className="flex gap-6">
@@ -91,7 +131,7 @@ function DetailDonasi() {
               </div>
               <div className="flex justify-between gap-16">
                 <Button
-                href="/donasi/pembayaran?id=1"
+                  href="/donasi/pembayaran?id=1"
                   text="Gabung Aksi"
                   textCustom="font-bold text-primary-600"
                   custom="w-full"
@@ -100,7 +140,7 @@ function DetailDonasi() {
                   shadow
                 />
                 <Button
-                href="/donasi/pembayaran"
+                  href="/donasi/pembayaran"
                   text="Donasi Sekarang"
                   type="primary"
                   size="large"
@@ -150,7 +190,9 @@ function DetailDonasi() {
               {desc ? (
                 <div className="flex flex-col gap-2 px-6 py-8 text-justify">
                   {details.detail.split("\n\n").map((e, i) => (
-                    <p key={i} className={i == 0 ? "font-semibold" : ""}>{e}</p>
+                    <p key={i} className={i == 0 ? "font-semibold" : ""}>
+                      {e}
+                    </p>
                   ))}
                 </div>
               ) : (
@@ -215,39 +257,39 @@ function DetailDonasi() {
               </div>
             </div>
             <div className="flex flex-col py-6 px-4 gap-2">
-              <div className="flex gap-4 p-2 bg-primary-50 rounded-lg">
-                <Image
-                  src={Profile}
-                  alt=".."
-                  className="aspect-square rounded-full object-cover w-[50px] h-[50px] border-primary-400 border-2"
-                />
-                <div>
-                  <p>Alwi</p>
-                  <p className="font-semibold">100 Pohon</p>
-                </div>
-              </div>
-              <div className="flex gap-4 p-2 bg-primary-50 rounded-lg">
-                <Image
-                  src={Profile}
-                  alt=".."
-                  className="aspect-square rounded-full object-cover w-[50px] h-[50px] border-primary-400 border-2"
-                />
-                <div>
-                  <p>Alwi</p>
-                  <p className="font-semibold">100 Pohon</p>
-                </div>
-              </div>
-              <div className="flex gap-4 p-2 bg-primary-50 rounded-lg">
-                <Image
-                  src={Profile}
-                  alt=".."
-                  className="aspect-square rounded-full object-cover w-[50px] h-[50px] border-primary-400 border-2"
-                />
-                <div>
-                  <p>Alwi</p>
-                  <p className="font-semibold">100 Pohon</p>
-                </div>
-              </div>
+              {!donatur
+                ? Donatur.sort((a, b) => b.jumlah - a.jumlah).map((e) => (
+                    <div
+                      key={e.id}
+                      className="flex gap-4 p-2 bg-primary-50 rounded-lg"
+                    >
+                      <Image
+                        src={Profile}
+                        alt=".."
+                        className="aspect-square rounded-full object-cover w-[50px] h-[50px] border-primary-400 border-2"
+                      />
+                      <div>
+                        <p>{e.nama}</p>
+                        <p className="font-semibold">{e.jumlah} Pohon</p>
+                      </div>
+                    </div>
+                  ))
+                : Donatur.map((e) => (
+                    <div
+                      key={e.id}
+                      className="flex gap-4 p-2 bg-primary-50 rounded-lg"
+                    >
+                      <Image
+                        src={Profile}
+                        alt=".."
+                        className="aspect-square rounded-full object-cover w-[50px] h-[50px] border-primary-400 border-2"
+                      />
+                      <div>
+                        <p>{e.nama}</p>
+                        <p className="font-semibold">{e.jumlah} Pohon</p>
+                      </div>
+                    </div>
+                  ))}
             </div>
           </div>
         </div>
