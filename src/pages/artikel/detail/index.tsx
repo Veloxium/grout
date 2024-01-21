@@ -1,7 +1,7 @@
 import Layout from "@/layout/layout";
 import React, { useState } from "react";
 import Image from "next/image";
-import Jo from "@/assets/images/jo.webp";
+import BgDetail from "@/assets/images/artikel/3.png";
 import BannerKampanye from "@/components/bannerKampanye";
 import CardArtikelDetail from "@/components/cardArtikelDetail";
 
@@ -118,10 +118,7 @@ function DetailArtikel() {
           </div>
           <div className="w-full h-[600px] overflow-hidden flex flex-col items-end px-10 gap-2">
             <Image
-              src={
-                "https://s3-alpha-sig.figma.com/img/649a/7c31/57e387d433221829a98d46adbd4bafd0?Expires=1704672000&Signature=nWPJ-FGQhaG662zdIIlgR5cayfk~ku1cz6amNIiNgTZ18sUvI-CErOh5Kry9yUUxD25TR1qRqk7Le3WuyovmjgM0xVN3rOL6PiMtGipCbooF3p6Z~4rZU5KE6HMX5O6Vp8zCgvZ6lyZsaSAiVjUdiydxX9FF4fVQys8Z~zbUAsnedYFrsBfUDcKOoZ9lSCUC5GuOXJL4uP4LmjrzLXNUQQF-Yvj9jAGnMQdBMKX6zaVg7hy3Dr-egNkKSxfxRrkYFgoZ0Q~eUaBvJ3lVt2IPB46ayveFpZm6dKCa~HpE4IZuR2fxEZX~tmGtkjZRiCxzSeuN9YTzKJkpXr-oOPOd~w__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-
-              }
+              src={BgDetail}
               width={900}
               height={900}
               alt="jo"
