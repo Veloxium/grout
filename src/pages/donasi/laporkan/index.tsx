@@ -35,7 +35,7 @@ function Laporkan() {
             <div className="w-1/2 flex flex-col justify-center">
               <p className="text-red-600">Laporkan Kampanye Mencurigakan</p>
               <p className="font-bold text-xl">
-                EXO-TREES: "Save Our World with EXO, WE ARE ONE!"
+                EXO-TREES: &quot;Save Our World with EXO, WE ARE ONE!&quot;
               </p>
               <div className="w-full border-2 border-slate-400 rounded-full my-2" />
               <div className="flex items-center gap-1">
