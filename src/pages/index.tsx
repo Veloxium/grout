@@ -30,7 +30,7 @@ export default function Home() {
 
   return (
     <Layout>
-      <section className="relative">
+      <section className="relative w-full">
         <div className="absolute -z-10">
           <Image
             src={Background}
@@ -38,15 +38,15 @@ export default function Home() {
             className="w-screen h-screen object-cover "
           />
         </div>
-        <div className="px-24 flex flex-col justify-end pb-20 h-screen">
-          <div className="flex flex-col justify-center w-2/3">
-            <p className="text-5xl font-bold drop-shadow-lg">
+        <div className="px-10 lg:px-24 flex flex-col justify-center lg:justify-end pb-20 h-screen">
+          <div className="flex flex-col justify-center lg:w-2/3">
+            <p className="text-6xl lg:text-5xl font-bold drop-shadow-lg">
               Pohon Untuk Masa Depan,
             </p>
-            <p className="text-5xl font-bold mt-4 drop-shadow-lg">
+            <p className="text-6xl lg:text-5xl font-bold mt-4 drop-shadow-lg">
               Donasikan Untuk Lingkungan!
             </p>
-            <p className="text-xl mb-10 mt-8 drop-shadow-lg">
+            <p className="text-4xl lg:text-xl mb-10 mt-8 drop-shadow-lg">
               Ayo bantu lingkungan menjadi lebih baik dan berikan dampak yang
               baik untuk masyarakat
             </p>
@@ -55,33 +55,38 @@ export default function Home() {
               text="Mulai Donasi"
               size="xlarge"
               type="primary"
-              custom="w-[14rem]"
+              textCustom="text-4xl lg:text-xl"
+              custom="lg:w-[14rem] py-4 lg:py-2"
             />
           </div>
-          <div className="flex justify-start gap-10 pt-10">
+          <div className="flex flex-col lg:flex-row justify-start gap-10 pt-10">
             <div className="flex flex-col items-start">
-              <p className="text-xl font-bold">1,290 Pohon</p>
-              <p>Jumlah Donasi Pohon saat ini</p>
+              <p className="text-4xl lg:text-xl font-bold">1,290 Pohon</p>
+              <p className="text-2xl lg:text-xl">
+                Jumlah Donasi Pohon saat ini
+              </p>
             </div>
             <div className="flex flex-col items-start">
-              <p className="text-xl font-bold">28 Kampanye</p>
-              <p>Jumlah Kampanye saat ini </p>
+              <p className="text-4xl lg:text-xl font-bold">28 Kampanye</p>
+              <p className="text-2xl lg:text-xl">Jumlah Kampanye saat ini </p>
             </div>
             <div className="flex flex-col items-start">
-              <p className="text-xl font-bold">Rp45,410,290 </p>
-              <p>Jumlah donasi saat ini</p>
+              <p className="text-4xl lg:text-xl font-bold">Rp45,410,290 </p>
+              <p className="text-2xl lg:text-xl">Jumlah donasi saat ini</p>
             </div>
           </div>
         </div>
       </section>
       <section className="flex flex-col justify-center items-center py-20">
-        <p className="font-semibold text-3xl">Kampanye Sedang Berlangsung</p>
+        <p className="font-semibold text-5xl lg:text-3xl">
+          Kampanye Sedang Berlangsung
+        </p>
         <div className="w-1/5 h-1 bg-black mt-6 rounded-md"></div>
         <div className="px-24 w-full flex justify-start mt-6">
           <div className="flex gap-4">
             <div onClick={handleKampanye} className="cursor-pointer">
               <p
-                className={`px-4 py-1 font-semibold border-2 border-primary-600
+                className={`px-4 py-1 text-2xl lg:text-base font-semibold border-2 border-primary-600
                  rounded-full hover:bg-primary-600 hover:text-white ease-in-out transition-all ${
                    kampanye === "semua"
                      ? "bg-primary-600 text-white"
@@ -93,7 +98,7 @@ export default function Home() {
             </div>
             <div onClick={handleKampanye} className="cursor-pointer">
               <p
-                className={`px-4 py-1 font-semibold border-2 border-primary-600
+                className={`px-4 py-1 text-2xl lg:text-base font-semibold border-2 border-primary-600
                  rounded-full hover:bg-primary-600 hover:text-white ease-in-out transition-all ${
                    kampanye === "sedang-berlangsung"
                      ? "bg-primary-600 text-white"
@@ -105,7 +110,7 @@ export default function Home() {
             </div>
             <div onClick={handleKampanye} className="cursor-pointer">
               <p
-                className={`px-4 py-1 font-semibold border-2 border-primary-600
+                className={`px-4 py-1 text-2xl lg:text-base font-semibold border-2 border-primary-600
                  rounded-full hover:bg-primary-600 hover:text-white ease-in-out transition-all ${
                    kampanye === "telah-selesai"
                      ? "bg-primary-600 text-white"
@@ -122,23 +127,23 @@ export default function Home() {
           text="Lihat Semua"
           type="border"
           size="xlarge"
-          textCustom="text-black font-semibold"
+          textCustom="text-black font-semibold text-3xl lg:text-xl"
           shadow
         />
       </section>
       <section className="flex flex-col items-center pb-20">
-        <p className="font-semibold text-3xl text-slate-700">
+        <p className="font-semibold text-5xl lg:text-3xl text-slate-700">
           Gallery Teman GrOUT
         </p>
         <div className="w-[230px] h-1 bg-slate-700 mt-6 rounded-md"></div>
         <SliderBanner />
       </section>
       <section className="flex flex-col items-center py-20">
-        <p className="font-semibold text-3xl text-slate-700">
+        <p className="font-semibold text-5xl lg:text-3xl text-slate-700">
           Harapan Teman GrOUT
         </p>
         <div className="w-[200px] h-1 bg-slate-700 mt-6 rounded-md"></div>
-        <div className="container flex justify-between my-20 gap-10">
+        <div className="container flex flex-col lg:flex-row justify-between my-20 gap-10">
           <CardHarapan />
           <CardHarapan />
           <CardHarapan />
@@ -146,10 +151,12 @@ export default function Home() {
         </div>
       </section>
       <section className="flex flex-col items-center py-20 bg-primary-100">
-        <p className="font-semibold text-3xl text-slate-700">Tekad GrOUT</p>
+        <p className="font-semibold text-5xl lg:text-3xl text-slate-700">
+          Tekad GrOUT
+        </p>
         <div className="w-[150px] h-1 bg-slate-700 mt-6 rounded-md"></div>
-        <div className=" flex justify-between my-16 px-24">
-          <div className="w-1/2">
+        <div className="flex flex-col gap-10 lg:flex-row justify-between my-16 px-10 lg:px-24">
+          <div className="w-full lg:w-1/2">
             <p className="text-4xl font-bold text-secondary-600">
               Setiap tindakan yang GrOUT lakukan bersama individu, komunitas,
               dan mitra lingkungan, secara positif mendukung pencapaian{" "}
@@ -158,7 +165,7 @@ export default function Home() {
               </span>
             </p>
           </div>
-          <div className="grid grid-cols-5 gap-2 ml-4">
+          <div className="grid grid-cols-5 gap-8 lg:gap-2 lg:ml-4">
             <Image
               src={G1}
               alt="..."
@@ -232,30 +239,35 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="flex justify-between py-20 px-24 gap-28">
-        <Image src={Gabung} alt="gabung" className="w-[475px]" />
-        <div className="flex flex-col my-6 justify-center gap-16">
-          <p className="text-6xl font-bold text-secondary-600">
+      <section className="lg:flex justify-between py-20 px-24 gap-28">
+        <Image
+          src={Gabung}
+          alt="gabung"
+          className="px-10 w-full lg:px-0 lg:w-[475px]"
+        />
+        <div className="flex flex-col my-6 justify-center gap-4 lg:gap-16">
+          <p className="text-4xl lg:text-6xl font-bold text-secondary-600">
             Sudah saatnya menanamkan harapan untuk alam Kita
           </p>
-          <p className="text-6xl font-bold text-secondary-800">
+          <p className="text-5xl lg:text-6xl font-bold text-secondary-800">
             Jadilah <br />
             #TemanGrOUT
           </p>
-          <div className="flex gap-20">
+          <div className="flex gap-20 mt-4 lg:mt-0">
             <Button
               href="/buatkampanye"
               text="Buat Kampanye"
               size="xlarge"
               type="primary"
-              custom="w-[270px]"
+              custom="w-[360px] lg:w-[270px]"
+              textCustom="text-3xl lg:text-xl"
             />
             <Button
               text="Mulai Donasi"
               size="xlarge"
               type="border"
               custom="w-[270px]"
-              textCustom="text-primary-600"
+              textCustom="text-primary-600 text-3xl lg:text-xl font-semibold "
             />
           </div>
         </div>

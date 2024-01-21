@@ -61,7 +61,7 @@ function SliderBanner() {
           width={0}
           height={0}
           decoding="sync"
-          className="duration-500 w-full z-10 aspect-[18/6] brightness-75 object-cover"
+          className="duration-500 w-full z-10 aspect-[12/6] lg:aspect-[18/6]  brightness-75 object-cover"
           loading="eager"
         />
         <button
@@ -103,10 +103,10 @@ function SliderBanner() {
           </svg>
         </button>
         <div className="absolute z-10 text-center">
-          <p className="text-3xl text-white font-bold">
+          <p className="text-4xl lg:text-3xl text-white font-bold">
             - {contents[currentIndex].title} -
           </p>
-          <p className="text-xl text-white font-semibold">
+          <p className="text-2xl lg:text-xl text-white font-semibold px-20 mt-4">
             {contents[currentIndex].desc}
           </p>
         </div>

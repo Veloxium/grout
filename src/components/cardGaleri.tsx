@@ -21,6 +21,7 @@ function CardGaleri({
     foto: string;
     tanggal: string;
     deskripsi: string;
+    link: string;
   };
   setId: any;
 }) {
@@ -33,7 +34,11 @@ function CardGaleri({
       <div className="w-full h-[360px] rounded-lg overflow-hidden group">
         <div className="relative w-full h-full">
           <Image
-            src={Foto}
+            src={
+              dataGaleri.link
+            }
+            width={900}
+            height={900}
             alt="..."
             className="w-full h-full object-cover absolute"
           />

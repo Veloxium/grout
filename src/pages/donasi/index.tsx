@@ -78,7 +78,7 @@ function Donasi() {
             </p>
             <Button
               href="/donasi/bersamagrout"
-              text="Mulai Donasi"
+              text="Donasi Sekarang"
               size="xlarge"
               type="primary"
               custom="w-[14rem]"

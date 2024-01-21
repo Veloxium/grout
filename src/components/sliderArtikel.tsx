@@ -8,25 +8,27 @@ import Banner4 from "@/assets/images/banner4.png";
 function SliderArtikel() {
   const contents = [
     {
-      url: Banner1,
-      title: "The Close The Door | 23 JAM",
-      desc: "Buwung Apa Tu Man? Buwung Puyuh.",
+      url: "https://s3-alpha-sig.figma.com/img/16de/b736/10553a56423ae5e767efb34115f74501?Expires=1704672000&Signature=VIVE0j3nWqZ1X~YUGcxvw27daAk-nBLPwooY2CCMUC00SdhaEloYGoJZpAbdtJNpVJH1jf7YgWn7jK7Iaz-5Ga3Mgeol70Y0zzJSHdFjvwbAc32jv5a7ibteYhaaOohVf0T1DTMb-E06Sqo2Qj9xNUCv9MOljk9dSDhJmYp0AmetAAXa5sZ0Fuf-~UMP3~kpPYynaAVYq-ck6kYXmlcrMHJwibcSeJYp-dwB9~BWYaZ6jhRyW~o-GX8XzVyxqudEVv6j1uo~lgir1YwVkF3UsPpxMN82SuoX7vtuHe632P3xs1CcNv0nCMXcqwHWs3xq9uep50hUS9mE8iAYBKgJcQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      title: "Kompas.com",
+      desc: "Sinopsis Petualangan Sherina 2, Kisah Jurnalis Pemberani Selidiki Krisis Lingkungan Kalimantan",
     },
     {
-      url: Banner2,
+      url: "https://s3-alpha-sig.figma.com/img/0468/5586/0519770f90445c63e111180dc7449467?Expires=1704672000&Signature=e~w5PY-JcIYOA5bySpwdNO8Pdq0yk0BzObFSjKsEksnEuuQvyV15sZLyVYxSSmEjybtut1Q7jS562lBcTXNqYVVhISc~QD-ZVxDKXYWDyCsI3CgFzhx904ejl7fnTewVkioVRBpVZS~pNQUpMqzHNygCCh3aO84cmqvOoZzDxNfpiSa9~on-VW75N0RRWs4fSsOCaNzH1983hC1043J~az3Pa5UIhTxt2ugtbmjE7i6gv4C6OPJz9igiWZ8~-XmycnqMbUsSArDs2bnrkatIZYXDECllElXouSCyeOBYh-j3RQzmHVFVBesMtzmMIu6knNdAyxcxQKf6h79VnZnEdg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
       title: "Kipas.com | 23 JAM",
-      desc: "Apakah Benar Bumi itu Berbentuk Prisma Segitiga? Inilah Fakta-Faktanya!",
+      desc: "Efek Pandawara Group: bagaimana konten positif bisa mengubah lingkungan?",
+    },
+    
+    {
+      url: "https://s3-alpha-sig.figma.com/img/16de/b736/10553a56423ae5e767efb34115f74501?Expires=1704672000&Signature=VIVE0j3nWqZ1X~YUGcxvw27daAk-nBLPwooY2CCMUC00SdhaEloYGoJZpAbdtJNpVJH1jf7YgWn7jK7Iaz-5Ga3Mgeol70Y0zzJSHdFjvwbAc32jv5a7ibteYhaaOohVf0T1DTMb-E06Sqo2Qj9xNUCv9MOljk9dSDhJmYp0AmetAAXa5sZ0Fuf-~UMP3~kpPYynaAVYq-ck6kYXmlcrMHJwibcSeJYp-dwB9~BWYaZ6jhRyW~o-GX8XzVyxqudEVv6j1uo~lgir1YwVkF3UsPpxMN82SuoX7vtuHe632P3xs1CcNv0nCMXcqwHWs3xq9uep50hUS9mE8iAYBKgJcQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      title: "Kompas.com",
+      desc: "Sinopsis Petualangan Sherina 2, Kisah Jurnalis Pemberani Selidiki Krisis Lingkungan Kalimantan",
     },
     {
-      url: Banner3,
-      title: "The Close The Door | 23 JAM",
-      desc: "Buwung Apa Tu Man? Buwung Puyuh.",
-    },
-    {
-      url: Banner4,
+      url: "https://s3-alpha-sig.figma.com/img/0468/5586/0519770f90445c63e111180dc7449467?Expires=1704672000&Signature=e~w5PY-JcIYOA5bySpwdNO8Pdq0yk0BzObFSjKsEksnEuuQvyV15sZLyVYxSSmEjybtut1Q7jS562lBcTXNqYVVhISc~QD-ZVxDKXYWDyCsI3CgFzhx904ejl7fnTewVkioVRBpVZS~pNQUpMqzHNygCCh3aO84cmqvOoZzDxNfpiSa9~on-VW75N0RRWs4fSsOCaNzH1983hC1043J~az3Pa5UIhTxt2ugtbmjE7i6gv4C6OPJz9igiWZ8~-XmycnqMbUsSArDs2bnrkatIZYXDECllElXouSCyeOBYh-j3RQzmHVFVBesMtzmMIu6knNdAyxcxQKf6h79VnZnEdg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
       title: "Kipas.com | 23 JAM",
-      desc: "Apakah Benar Bumi itu Berbentuk Prisma Segitiga? Inilah Fakta-Faktanya!",
+      desc: "Efek Pandawara Group: bagaimana konten positif bisa mengubah lingkungan?",
     },
+    
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);

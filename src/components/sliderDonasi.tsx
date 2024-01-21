@@ -1,9 +1,7 @@
-import React from 'react';
+import React, { use, useEffect } from 'react';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { A11y, Navigation, Pagination } from "swiper/modules";
 import CardDonasi from "@/components/cardDonasi";
-import Donasi from "@/assets/images/donasi.jpeg";
-import { Poppins } from 'next/font/google';
 
 type sliderDonasi = {
     status?: string
@@ -12,7 +10,21 @@ type sliderDonasi = {
 
 
 function SliderDonasi(props: sliderDonasi) {
+  
     const [status, setStatus] = React.useState(props.status);
+    const [slidesPerView, setSlidesPerView] = React.useState(3);
+    useEffect(() => {
+      if(window.innerWidth < 768){
+        setSlidesPerView(1)
+      }
+      else if(window.innerWidth < 1024){
+        setSlidesPerView(2)
+      }
+      else{
+        setSlidesPerView(4)
+      }
+    }
+    , [])
   return (
     <div className="w-full relative flex justify-center px-24">
       <div className="prev z-10 left-0 h-full absolute flex items-center pl-4 px-6 justify-center hover:bg-primary-200 hover:bg-opacity-30 ">
@@ -35,7 +47,9 @@ function SliderDonasi(props: sliderDonasi) {
       <Swiper
         modules={[Navigation, Pagination, A11y]}
         spaceBetween={40}
-        slidesPerView={4}
+        slidesPerView={
+        slidesPerView 
+        }
         navigation={{
           nextEl: ".next",
           prevEl: ".prev",

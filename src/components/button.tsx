@@ -12,6 +12,7 @@ type ButtonProps = {
   shadow?: boolean;
   href?: string;
   disabled?: boolean;
+  onClick?: () => void;
 };
 
 function Button(props: ButtonProps) {
@@ -54,7 +55,7 @@ function Button(props: ButtonProps) {
     </div>
   ) : (
     <Link
-      href={props.href ? props.href : ""}
+      href={props.href? props.href : ""}
       className={`inline-flex text-white items-center justify-center gap-2 rounded-md cursor-pointer ${shadowClass} ${typeClass} ${sizeClass} ${props.custom}`}
     >
       <p className={props.textCustom}>{props.text}</p>

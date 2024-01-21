@@ -10,6 +10,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="description" content="Donasi untuk anak-anak Indonesia" />
         <meta name="viewport" content="viewport-fit=cover" />
         <title>GROUT</title>
+        <link rel="icon" href="icon.png" />
       </Head>
       <Component {...pageProps} />
     </>

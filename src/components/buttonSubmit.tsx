@@ -10,7 +10,7 @@ type ButtonProps = {
   size?: "small" | "medium" | "large" | "xlarge";
   shadow?: boolean;
   href?: string;
-  onClick?: () => void;
+  onClick?: (e : any) => void;
 };
 
 function ButtonSubmit(props: ButtonProps) {

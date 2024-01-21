@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
-import Buat from "@/assets/images/buat.png";
+import Buat from "@/assets/images/banner.png";
 import Button from "./button";
 
-function BannerKampanye({customeClass}: {customeClass?: string}) {
+function BannerKampanye({ customeClass }: { customeClass?: string }) {
   return (
     <div
       className={`relative flex flex-col justify-center px-10 h-full rounded-xl overflow-hidden shadow-lg ${customeClass}`}
@@ -12,10 +12,13 @@ function BannerKampanye({customeClass}: {customeClass?: string}) {
         <Image src={Buat} alt="buat kampanye" className="w-full object-cover" />
       </div>
       <div className="w-full flex flex-col items-start">
-        <p className="text-4xl font-bold max-w-[400px] text-secondary-600 mb-4 text-start">
-          Buat Kampanye Pohon Kamu Sekarang!
+        <p className="text-4xl font-bold max-w-[500px] text-primary-800 mb-4 text-start">
+          Bergabunglah, Tanamkan Harapan untuk Alam Kita
         </p>
-        <Button text="Buat Kampanye" type="primary" />
+        <div className="flex gap-8">
+          <Button text="Buat Kampanye" type="border" custom="bg-slate-50" textCustom="text-primary-600 font-bold" href="/buatkampanye"/>
+          <Button text="Donasi Sekarang" type="primary" />
+        </div>
       </div>
     </div>
   );

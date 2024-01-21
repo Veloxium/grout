@@ -116,11 +116,20 @@ function DetailArtikel() {
             <p>Oleh Nanda Pake Z.</p>
             <p>Rabu, 22 November 2023</p>
           </div>
-          <div className="w-full h-[600px] overflow-hidden flex flex-col items-end px-24 gap-2">
-            <Image src={Jo} alt="jo" className="object-cover w-full" />
+          <div className="w-full h-[600px] overflow-hidden flex flex-col items-end px-10 gap-2">
+            <Image
+              src={
+                "https://s3-alpha-sig.figma.com/img/649a/7c31/57e387d433221829a98d46adbd4bafd0?Expires=1704672000&Signature=nWPJ-FGQhaG662zdIIlgR5cayfk~ku1cz6amNIiNgTZ18sUvI-CErOh5Kry9yUUxD25TR1qRqk7Le3WuyovmjgM0xVN3rOL6PiMtGipCbooF3p6Z~4rZU5KE6HMX5O6Vp8zCgvZ6lyZsaSAiVjUdiydxX9FF4fVQys8Z~zbUAsnedYFrsBfUDcKOoZ9lSCUC5GuOXJL4uP4LmjrzLXNUQQF-Yvj9jAGnMQdBMKX6zaVg7hy3Dr-egNkKSxfxRrkYFgoZ0Q~eUaBvJ3lVt2IPB46ayveFpZm6dKCa~HpE4IZuR2fxEZX~tmGtkjZRiCxzSeuN9YTzKJkpXr-oOPOd~w__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+
+              }
+              width={900}
+              height={900}
+              alt="jo"
+              className="object-cover w-full"
+            />
             <p>Jonathan Liandi/Propler Ml/</p>
           </div>
-          <div className="flex flex-col gap-4 px-24 text-justify text-lg border-y-4 py-4">
+          <div className="flex flex-col gap-4 px-24 text-justify text-lg border-y-4 py-4 mt-4">
             <p className="font-bold my-2">Lorem ipsum dolor sit amet.</p>
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.

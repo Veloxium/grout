@@ -40,19 +40,17 @@ export default function CardDonasi(props: CardProps) {
     <Link
       // href={`/donasi/detail/${props.id}`}
       href={`/donasi/detail`}
-      className={`flex flex-col justify-center bg-white w-[300px] rounded-lg overflow-hidden border-2 shadow-md hover:border-primary-400 ease-in-out duration-300 ${poppins.className}`}
+      className={`flex flex-col justify-center bg-white w-[400px] lg:w-[300px] rounded-lg overflow-hidden border-2 shadow-md hover:border-primary-400 ease-in-out duration-300 ${poppins.className}`}
     >
-      <div className="overflow-hidden h-[200px] flex items-center relative">
+      <div className="overflow-hidden h-[260px] lg:h-[200px] flex items-center relative">
         <Image src={props.img} alt="img" width={1000} height={1000} />
         <div className="absolute top-3 left-3 rounded-full px-3 py-1 bg-slate-200">
           <p className="text-xs text-primary-800">{props.sisaHari} Hari Lagi</p>
         </div>
       </div>
       <div className="p-4 gap-2 flex flex-col">
-        <p className="text-lg font-semibold">
-          {props.title}
-        </p>
-        <p className="text-md text-slate-700">
+        <p className="text-2xl lg:text-lg font-semibold">{props.title}</p>
+        <p className="text-xl lg:text-md text-slate-700">
           Oleh : <span>{props.nama}</span>
         </p>
         <div className="w-full bg-slate-200 rounded-md">
@@ -60,7 +58,7 @@ export default function CardDonasi(props: CardProps) {
             className={`bg-[#458E22] rounded-md h-2 ${uniqueClassName}`}
           ></div>
         </div>
-        <p className="font-semibold text-sm">
+        <p className="font-semibold text-md lg:text-sm">
           {props.jumlahPohon} Pohon Terkumpul
         </p>
       </div>

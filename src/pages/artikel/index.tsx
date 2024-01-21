@@ -114,20 +114,30 @@ function Artikel() {
                 className="absolute -z-10 w-full h-full object-cover"
               />
               <div className="flex flex-col p-6 justify-center hover:bg-white hover:bg-opacity-40">
-                <p className="font-semibold text-xl drop-shadow-lg">1,290 Pohon</p>
+                <p className="font-semibold text-xl drop-shadow-lg">
+                  1,290 Pohon
+                </p>
                 <p className="drop-shadow-lg">Jumlah Donasi pohon saat ini</p>
               </div>
               <div className="flex flex-col p-6 justify-center hover:bg-white hover:bg-opacity-40">
-                <p className="font-semibold text-xl drop-shadow-lg">1,290 Pohon</p>
-                <p className="drop-shadow-lg">Jumlah Donasi pohon saat ini</p>
+                <p className="font-semibold text-xl drop-shadow-lg">
+                  1,290 Pohon
+                </p>
+                <p className="drop-shadow-lg">
+                  Jumlah pohon yang sudah ditanami
+                </p>
               </div>
               <div className="flex flex-col p-6 justify-center hover:bg-white hover:bg-opacity-40">
-                <p className="font-semibold text-xl drop-shadow-lg">1,290 Pohon</p>
-                <p className="drop-shadow-lg">Jumlah Donasi pohon saat ini</p>
+                <p className="font-semibold text-xl drop-shadow-lg">
+                  Rp 45,656,543
+                </p>
+                <p className="drop-shadow-lg">Jumlah Donasi saat ini</p>
               </div>
               <div className="flex flex-col p-6 justify-center hover:bg-white hover:bg-opacity-40">
-                <p className="font-semibold text-xl drop-shadow-lg">1,290 Pohon</p>
-                <p className="drop-shadow-lg">Jumlah Donasi pohon saat ini</p>
+                <p className="font-semibold text-xl drop-shadow-lg">
+                  90 Kampanye
+                </p>
+                <p className="drop-shadow-lg">Jumlah Kampanye saat ini</p>
               </div>
             </div>
           </div>
