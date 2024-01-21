@@ -1,40 +1,31 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Grout - Platform Informasi Lingkungan dan Donasi Pohon
 
-## Getting Started
+![Grout](https://github.com/Veloxium/grout/assets/111406150/1f17ec64-f606-48d4-9baf-6cf316c5e4f2)
 
-First, run the development server:
+## Deskripsi
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Grout adalah platform informasi lingkungan yang memfokuskan pada berita dan gerakan terkait isu-isu lingkungan. Dengan desain yang bersahabat dan intuitif, Grout memberikan informasi yang dapat meningkatkan kesadaran masyarakat terhadap permasalahan lingkungan. Fitur utama dari website ini adalah kemampuan untuk melakukan donasi pohon, memungkinkan siapa saja yang peduli dengan penanaman pohon untuk berkontribusi melalui kampanye donasi.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Grout kami buat dalam pembelajaran dan diskusi yang panjang pada BRIDA School Academy. BRIDA School Academy merupakan inisiatif pendidikan yang diselenggarakan oleh Badan Riset dan Inovasi Daerah Provinsi Nusa Tengggara Barat (BRIDA NTB). Kursus pemrograman gratis untuk siswa NTB, yang bertujuan untuk meningkatkan literasi teknologi dan keterampilan pemrograman.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Note: Beberapa bagian pada website masih dalam proses development dan gambar masih menggunakan gambar secara random. Terimakasih 🥰 
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Fitur
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- **Berita Lingkungan**: Baca berita terbaru dan terkini mengenai isu-isu lingkungan di seluruh dunia.
+- **Gerakan Lingkungan**: Dapatkan informasi tentang berbagai gerakan dan kampanye lingkungan yang sedang berlangsung.
+- **Donasi Pohon**: Galang donasi untuk kampanye penanaman pohon dan ikuti perkembangannya secara real-time.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## Pengembang
 
-To learn more about Next.js, take a look at the following resources:
+- **Baiq Soraya Aprilia Monica**
+- **Mochammad Fernanda**
+- **M. Daden Kasandi Putra Wesa**
+- **Alwyanto Saputra**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Mentor
+- **Rizaldi Septian Fauzi**
+- **Agung Dwitatwa Achmadi**
+- **Wisnu Rizaldy**
