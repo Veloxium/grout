@@ -19,10 +19,10 @@ Note: Beberapa bagian pada website masih dalam proses development dan gambar mas
 
 ## Pengembang
 
-- **Baiq Soraya Aprilia Monica**
-- **Mochammad Fernanda**
+- **Baiq Soraya Aprilia Monica** - ig : sryprlmnc._
+- **Mochammad Fernanda** - ig : mchfrnnda_
 - **M. Daden Kasandi Putra Wesa**
-- **Alwyanto Saputra**
+- **Alwyanto Saputra** - ig : alwyyyyyyyyyy_
 
 
 ## Mentor
