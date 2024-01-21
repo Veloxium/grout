@@ -14,7 +14,7 @@ function CardHarapan() {
         <div className="flex flex-col">
           <p className="font-semibold text-2xl lg:text-base">Mark</p>
           <p className="font-bold text-xl lg:text-xs">
-            EXO_TREES: "Save Our World with EXO, WE ARE ONE!"
+            EXO_TREES: &quot;Save Our World with EXO, WE ARE ONE!&quot;
           </p>
         </div>
       </div>

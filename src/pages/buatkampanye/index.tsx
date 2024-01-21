@@ -28,7 +28,7 @@ function BuatKampanye() {
 
   function StepSatu() {
     return (
-      <div className="flex flex-col items-center justify-center py-24">
+      <div key={0} className="flex flex-col items-center justify-center py-24">
         <p className="text-4xl font-bold">Bersama GrOUT</p>
         <p className="text-4xl font-bold">
           Bersatu untuk Kehidupan Berkelanjutan
@@ -214,7 +214,7 @@ function BuatKampanye() {
 
   function StepDua() {
     return (
-      <div className="flex flex-col items-center justify-center py-24">
+      <div key={1} className="flex flex-col items-center justify-center py-24">
         <p className="text-4xl font-bold">Bersama GrOUT</p>
         <p className="text-4xl font-bold">
           Bersatu untuk Kehidupan Berkelanjutan
@@ -333,7 +333,7 @@ function BuatKampanye() {
 
   function StepTiga() {
     return (
-      <div className="flex flex-col items-center justify-center py-24">
+      <div key={2} className="flex flex-col items-center justify-center py-24">
         <p className="text-4xl font-bold">Bersama GrOUT</p>
         <p className="text-4xl font-bold">
           Bersatu untuk Kehidupan Berkelanjutan
@@ -522,7 +522,7 @@ function BuatKampanye() {
 
   function StepEmpat() {
     return (
-      <div className="flex flex-col items-center justify-center py-24">
+      <div key={3} className="flex flex-col items-center justify-center py-24">
         <p className="text-4xl font-bold">Bersama GrOUT</p>
         <p className="text-4xl font-bold">
           Bersatu untuk Kehidupan Berkelanjutan
@@ -945,11 +945,11 @@ function BuatKampanye() {
   }
 
   const page = [
-    <StepSatu key={0} />,
-    <StepDua key={1} />,
-    <StepTiga key={2} />,
-    <StepEmpat key={3} />,
-    <StepLima key={4} />,
+    <StepSatu />,
+    <StepDua />,
+    <StepTiga  />,
+    <StepEmpat />,
+    <StepLima  />,
   ];
 
   return (
