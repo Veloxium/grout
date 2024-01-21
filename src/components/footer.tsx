@@ -6,7 +6,7 @@ function Footer() {
   return (
     <footer className="px-20 border-t-2 border-primary-600 py-6">
       <div className="flex flex-col">
-        <div className="flex gap-[280px] items-start">
+        <div className="flex lg:gap-[280px] items-start">
           <div className="flex flex-col">
             <Image src={Logo} alt="logo" className="w-[260px]" />
             <div className="flex justify-between w-[260px] font-semibold">
@@ -21,7 +21,7 @@ function Footer() {
               <p className="text-primary-400 tracking-[0.5em]">Tree</p>
             </div>
           </div>
-          <div className="flex justify-between w-full">
+          <div className="hidden lg:flex justify-between w-full">
             <div className="flex flex-col">
               <p className="font-bold mb-4">Beranda</p>
               <p className="text-sm">Kampanye</p>

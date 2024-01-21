@@ -239,7 +239,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="lg:flex justify-between py-20 px-24 gap-28">
+      <section className="lg:flex justify-between py-20 px-10 lg:px-24 gap-28">
         <Image
           src={Gabung}
           alt="gabung"
@@ -259,14 +259,14 @@ export default function Home() {
               text="Buat Kampanye"
               size="xlarge"
               type="primary"
-              custom="w-[360px] lg:w-[270px]"
+              custom="w-full lg:w-[270px]"
               textCustom="text-3xl lg:text-xl"
             />
             <Button
               text="Mulai Donasi"
               size="xlarge"
               type="border"
-              custom="w-[270px]"
+              custom="w-full lg:w-[270px]"
               textCustom="text-primary-600 text-3xl lg:text-xl font-semibold "
             />
           </div>
