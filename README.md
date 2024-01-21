@@ -14,6 +14,7 @@ Note: Beberapa bagian pada website masih dalam proses development dan gambar mas
 
 - **Berita Lingkungan**: Baca berita terbaru dan terkini mengenai isu-isu lingkungan di seluruh dunia.
 - **Gerakan Lingkungan**: Dapatkan informasi tentang berbagai gerakan dan kampanye lingkungan yang sedang berlangsung.
+- **Peta Penanaman**: Dapatkan informasi titik titik penanaman pohon di NTB.
 - **Donasi Pohon**: Galang donasi untuk kampanye penanaman pohon dan ikuti perkembangannya secara real-time.
 
 
