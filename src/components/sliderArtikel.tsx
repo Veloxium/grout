@@ -1,30 +1,30 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import Banner1 from "@/assets/images/banner1.png";
-import Banner2 from "@/assets/images/banner2.png";
-import Banner3 from "@/assets/images/banner3.png";
-import Banner4 from "@/assets/images/banner4.png";
+import Banner1 from "@/assets/images/artikel/1.png";
+import Banner2 from "@/assets/images/artikel/2.png";
+import Banner3 from "@/assets/images/artikel/3.png";
+import Banner4 from "@/assets/images/artikel/4.png";
 
 function SliderArtikel() {
   const contents = [
     {
-      url: "https://s3-alpha-sig.figma.com/img/16de/b736/10553a56423ae5e767efb34115f74501?Expires=1704672000&Signature=VIVE0j3nWqZ1X~YUGcxvw27daAk-nBLPwooY2CCMUC00SdhaEloYGoJZpAbdtJNpVJH1jf7YgWn7jK7Iaz-5Ga3Mgeol70Y0zzJSHdFjvwbAc32jv5a7ibteYhaaOohVf0T1DTMb-E06Sqo2Qj9xNUCv9MOljk9dSDhJmYp0AmetAAXa5sZ0Fuf-~UMP3~kpPYynaAVYq-ck6kYXmlcrMHJwibcSeJYp-dwB9~BWYaZ6jhRyW~o-GX8XzVyxqudEVv6j1uo~lgir1YwVkF3UsPpxMN82SuoX7vtuHe632P3xs1CcNv0nCMXcqwHWs3xq9uep50hUS9mE8iAYBKgJcQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      url: Banner1,
       title: "Kompas.com",
       desc: "Sinopsis Petualangan Sherina 2, Kisah Jurnalis Pemberani Selidiki Krisis Lingkungan Kalimantan",
     },
     {
-      url: "https://s3-alpha-sig.figma.com/img/0468/5586/0519770f90445c63e111180dc7449467?Expires=1704672000&Signature=e~w5PY-JcIYOA5bySpwdNO8Pdq0yk0BzObFSjKsEksnEuuQvyV15sZLyVYxSSmEjybtut1Q7jS562lBcTXNqYVVhISc~QD-ZVxDKXYWDyCsI3CgFzhx904ejl7fnTewVkioVRBpVZS~pNQUpMqzHNygCCh3aO84cmqvOoZzDxNfpiSa9~on-VW75N0RRWs4fSsOCaNzH1983hC1043J~az3Pa5UIhTxt2ugtbmjE7i6gv4C6OPJz9igiWZ8~-XmycnqMbUsSArDs2bnrkatIZYXDECllElXouSCyeOBYh-j3RQzmHVFVBesMtzmMIu6knNdAyxcxQKf6h79VnZnEdg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      url: Banner2,
       title: "Kipas.com | 23 JAM",
       desc: "Efek Pandawara Group: bagaimana konten positif bisa mengubah lingkungan?",
     },
     
     {
-      url: "https://s3-alpha-sig.figma.com/img/16de/b736/10553a56423ae5e767efb34115f74501?Expires=1704672000&Signature=VIVE0j3nWqZ1X~YUGcxvw27daAk-nBLPwooY2CCMUC00SdhaEloYGoJZpAbdtJNpVJH1jf7YgWn7jK7Iaz-5Ga3Mgeol70Y0zzJSHdFjvwbAc32jv5a7ibteYhaaOohVf0T1DTMb-E06Sqo2Qj9xNUCv9MOljk9dSDhJmYp0AmetAAXa5sZ0Fuf-~UMP3~kpPYynaAVYq-ck6kYXmlcrMHJwibcSeJYp-dwB9~BWYaZ6jhRyW~o-GX8XzVyxqudEVv6j1uo~lgir1YwVkF3UsPpxMN82SuoX7vtuHe632P3xs1CcNv0nCMXcqwHWs3xq9uep50hUS9mE8iAYBKgJcQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      url: Banner3,
       title: "Kompas.com",
       desc: "Sinopsis Petualangan Sherina 2, Kisah Jurnalis Pemberani Selidiki Krisis Lingkungan Kalimantan",
     },
     {
-      url: "https://s3-alpha-sig.figma.com/img/0468/5586/0519770f90445c63e111180dc7449467?Expires=1704672000&Signature=e~w5PY-JcIYOA5bySpwdNO8Pdq0yk0BzObFSjKsEksnEuuQvyV15sZLyVYxSSmEjybtut1Q7jS562lBcTXNqYVVhISc~QD-ZVxDKXYWDyCsI3CgFzhx904ejl7fnTewVkioVRBpVZS~pNQUpMqzHNygCCh3aO84cmqvOoZzDxNfpiSa9~on-VW75N0RRWs4fSsOCaNzH1983hC1043J~az3Pa5UIhTxt2ugtbmjE7i6gv4C6OPJz9igiWZ8~-XmycnqMbUsSArDs2bnrkatIZYXDECllElXouSCyeOBYh-j3RQzmHVFVBesMtzmMIu6knNdAyxcxQKf6h79VnZnEdg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      url: Banner4,
       title: "Kipas.com | 23 JAM",
       desc: "Efek Pandawara Group: bagaimana konten positif bisa mengubah lingkungan?",
     },
@@ -59,9 +59,9 @@ function SliderArtikel() {
       <div className="object-cover bg-cover flex justify-center items-center relative">
         <Image
           src={contents[currentIndex].url}
-          alt=""
-          width={700}
-          height={700}
+          alt="article"
+          width={1000}
+          height={1000}
           decoding="sync"
           className="duration-500 w-full z-10 aspect-[2/1] brightness-75 object-cover"
           loading="eager"
@@ -109,7 +109,7 @@ function SliderArtikel() {
           <p className="text-xl text-white font-bold  drop-shadow-lg">
             {contents[currentIndex].title}
           </p>
-          <p className="text-4xl text-white font-bold  drop-shadow-lg">
+          <p className="text-2xl text-white font-bold  drop-shadow-lg">
             {contents[currentIndex].desc}
           </p>
         </div>

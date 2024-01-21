@@ -1,6 +1,5 @@
 import React from "react";
-import Image from "next/image";
-import Foto from "@/assets/images/galericard.jpeg";
+import Image, { StaticImageData } from "next/image";
 
 function CardGaleri({
   modal,
@@ -21,7 +20,7 @@ function CardGaleri({
     foto: string;
     tanggal: string;
     deskripsi: string;
-    link: string;
+    link: StaticImageData;
   };
   setId: any;
 }) {
@@ -37,8 +36,8 @@ function CardGaleri({
             src={
               dataGaleri.link
             }
-            width={900}
-            height={900}
+            width={1000}
+            height={1000}
             alt="..."
             className="w-full h-full object-cover absolute"
           />
