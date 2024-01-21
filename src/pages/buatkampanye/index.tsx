@@ -945,11 +945,11 @@ function BuatKampanye() {
   }
 
   const page = [
-    <StepSatu />,
-    <StepDua />,
-    <StepTiga  />,
-    <StepEmpat />,
-    <StepLima  />,
+    <StepSatu key="stepSatu" />,
+    <StepDua key="stepDua" />,
+    <StepTiga key="stepTiga" />,
+    <StepEmpat key="stepEmpat" />,
+    <StepLima key="stepLima" />,
   ];
 
   return (
